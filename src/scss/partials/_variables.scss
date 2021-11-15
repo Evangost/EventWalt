@@ -1,11 +1,12 @@
 // main colors
-$main-first-color: red;
-$main-second-color: green;
-$main-third-color: blue;
+$main-first-color: #222349;
+$main-second-color: #59AAE8;
+$main-third-color: #E95B58;
+$main-light-color: #F4F1E8;
 
 // colors
-$title-color: #111;
-$text-color: #333;
+$title-color: $main-first-color;
+$text-color: $main-first-color;
 $input-placeholder-color: #aaa;
 
 // fonts
@@ -27,3 +28,18 @@ $transition-base: all .3s ease 0s;
 //Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1220px,
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1210px,
+);

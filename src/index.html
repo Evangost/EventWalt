@@ -11,14 +11,56 @@
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container">
+            <div class="header-content">
+                <ul class="header__nav-menu">
+                    <li>
+                        <a href="#">Platform <svg><use xlink:href="./img/spritemap.svg#sprite-chevron-down"></use></svg></a>
+                    </li>
+
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+
+                <a href="index.html" class="logo"><svg><use xlink:href="./img/spritemap.svg#sprite-logo"></use></svg></a>
+
+                <div class="header__tools">
+                    <div class="languages">
+                        <span class="languages__current">Eng</span>
+
+                        <ul class="languages__list">
+                            <li><a href="#">Ru</a></li>
+                            <li><a href="#">Ua</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="login">Log in</a>
+
+                    <button type="button">Explore Events</button>
+                </div>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
+        <section class="section section-main-home">
+            <div class="container">
+
+            </div>
+        </section>
+
+
         <div class="section">
             <div class="container">
                 <h2>Section Slider</h2>
@@ -77,22 +119,6 @@
                 <svg>
                     <use xlink:href="img/spritemap.svg#sprite-ok"></use>
                 </svg>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Range slider</h2>
-
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
-
-                <br>
-
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
             </div>
         </div>
     </main>
