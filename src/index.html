@@ -12,10 +12,17 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container">
+            <button type="button" class="header-content__toggle" hidden></button>
             <div class="header-content">
-                <ul class="header__nav-menu">
+                <ul class="header__menu">
                     <li>
                         <a href="#">Platform <svg><use xlink:href="./img/spritemap.svg#sprite-chevron-down"></use></svg></a>
+
+                        <ul class="header__menu-drop">
+                            <li><a href="#">dropdown link</a></li>
+                            <li><a href="#">dropdown link</a></li>
+                            <li><a href="#">dropdown link</a></li>
+                        </ul>
                     </li>
 
                     <li>
@@ -34,18 +41,19 @@
                 <a href="index.html" class="logo"><svg><use xlink:href="./img/spritemap.svg#sprite-logo"></use></svg></a>
 
                 <div class="header__tools">
-                    <div class="languages">
-                        <span class="languages__current">Eng</span>
+                    <div class="header__languages">
+                        <span class="header__languages-current">Eng</span>
 
-                        <ul class="languages__list">
+                        <ul class="header__languages-list">
                             <li><a href="#">Ru</a></li>
                             <li><a href="#">Ua</a></li>
                         </ul>
                     </div>
 
-                    <a href="#" class="login">Log in</a>
+                    <a href="#" class="header__login">Log in</a>
 
-                    <button type="button">Explore Events</button>
+                    <a href="#" class="btn btn-link">Explore Events</a>
+                    <a href="#" class="btn btn-link" hidden>Request a Demo</a>
                 </div>
             </div>
         </div>
@@ -54,71 +62,219 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-main-home">
-            <div class="container">
+        <section class="section section-main-home bg-gradient">
+            <div class="container main-home">
+                <h1 class="main-home__title">EVENTS <span>OF <br>THE</span> FUTURE</h1>
 
-            </div>
-        </section>
+                <p class="main-home__text">User-friendly event management, engagement, and networking tools for your onsite, virtual, and hybrid events, all in a single platform</p>
 
+                <div class="main-home__buttons">
+                    <button type="button" class="btn btn-light">Request a demo</button>
+                    <button type="button" class="btn btn-gradient btn-gradient_light">Create a platform</button>
+                </div>
 
-        <div class="section">
-            <div class="container">
-                <h2>Section Slider</h2>
-
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                <div class="main-home__team">
+                    <div class="main-home__team-box-wrap">
+                        <div class="main-home__team-box bg-primary">
+                            <div class="main-home__team-box-front">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/team01.png') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+                            <div class="main-home__team-box-back">
+                                <p class="main-home__team-box-title">Back side</p>
+                                <p class="main-home__team-box-text">Easily add or remove any text on your flip box!</p>
+                                <button class="btn btn-light">read more</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <div class="main-home__team-box-wrap">
+                        <div class="main-home__team-box bg-info">
+                            <div class="main-home__team-box-front">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/team02.png') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+                            <div class="main-home__team-box-back">
+                                <p class="main-home__team-box-title">Back side</p>
+                                <p class="main-home__team-box-text">Easily add or remove any text on your flip box!</p>
+                                <button class="btn btn-primary">read more</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="main-home__team-box-wrap">
+                        <div class="main-home__team-box bg-danger">
+                            <div class="main-home__team-box-front">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/team03.png') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+                            <div class="main-home__team-box-back">
+                                <p class="main-home__team-box-title">Back side</p>
+                                <p class="main-home__team-box-text">Easily add or remove any text on your flip box!</p>
+                                <button class="btn btn-primary">read more</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!--<div class="swiper-scrollbar"></div>-->
+                    <div class="main-home__team-box-wrap">
+                        <div class="main-home__team-box bg-info">
+                            <div class="main-home__team-box-front">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/team04.png') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+                            <div class="main-home__team-box-back">
+                                <p class="main-home__team-box-title">Back side</p>
+                                <p class="main-home__team-box-text">Easily add or remove any text on your flip box!</p>
+                                <button class="btn btn-primary">read more</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-home__team-box-wrap">
+                        <div class="main-home__team-box bg-primary">
+                            <div class="main-home__team-box-front">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/team05.png') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+                            <div class="main-home__team-box-back">
+                                <p class="main-home__team-box-title">Back side</p>
+                                <p class="main-home__team-box-text">Easily add or remove any text on your flip box!</p>
+                                <button class="btn btn-light">read more</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
+        <section class="section section-partners">
+            <div class="container"></div>
+        </section>
 
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
+        <section class="section section-platform">
+            <div class="container"></div>
+        </section>
+
+        <section class="section section-secure-info">
+            <div class="container"></div>
+        </section>
+
+        <section class="section section-events">
+            <div class="container"></div>
+        </section>
+
+        <section class="section section-reviews">
+            <div class="container"></div>
+        </section>
+
+        <section class="section section-mobile-app">
+            <div class="container"></div>
+        </section>
+
+        <section class="section section-subscribe">
+            <div class="container"></div>
+        </section>
+
+        <div>
+            <!--<div class="section">
+                <div class="container">
+                    <h2>Section Slider</h2>
+
+                    <div class="main-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            &lt;!&ndash; Slides &ndash;&gt;
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        &lt;!&ndash;<div class="swiper-scrollbar"></div>&ndash;&gt;
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary">Главный</button>
+                            <button type="button" class="btn btn-secondary">Вторичный</button>
+                            <button type="button" class="btn btn-success">Успех</button>
+                            <button type="button" class="btn btn-danger">Опасность</button>
+                            <button type="button" class="btn btn-warning">Предупреждение</button>
+                            <button type="button" class="btn btn-info">Инфо</button>
+                            <button type="button" class="btn btn-light">Светлый</button>
+                            <button type="button" class="btn btn-dark">Темный</button>
+
+                            <button class="btn btn-gradient btn-gradient_light">Градиент</button>
+                            <button class="btn btn-gradient btn-gradient_dark">Градиент</button>
+
+                            <button type="button" class="btn btn-link">Линк</button>
+                            <button type="button" class="btn btn-light btn-link">Линк</button>
+
+                            <span class="color-separator color-separator_dark"></span>
+                            <div class="bg-gradient">
+                                <span class="color-separator color-separator_light"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-outline-primary">Главный</button>
+                            <button type="button" class="btn btn-outline-secondary">Вторичный</button>
+                            <button type="button" class="btn btn-outline-success">Успех</button>
+                            <button type="button" class="btn btn-outline-danger">Опасность</button>
+                            <button type="button" class="btn btn-outline-warning">Предупреждение</button>
+                            <button type="button" class="btn btn-outline-info">Инфо</button>
+                            <button type="button" class="btn btn-outline-light">Светлый</button>
+                            <button type="button" class="btn btn-outline-dark">Темный</button>
+                        </div>
+                    </div>
+
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
+                    </picture>
+
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-ok"></use>
+                    </svg>
+                </div>
             </div>
         </div>
     </main>
@@ -126,8 +282,16 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="footer-info">
+                <a href="index.html"><svg><use xlink:href="./img/spritemap.svg#sprite-logo"></use></svg></a>
+            </div>
+            <div class="footer-column"></div>
+            <div class="footer-column"></div>
+            <div class="footer-column"></div>
+        </div>
+        <div class="container">
+
         </div>
     </footer>
     <!-- FOOTER END -->

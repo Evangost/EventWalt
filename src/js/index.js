@@ -7,6 +7,11 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/swiper-bundle.min';
 
+function headerPosition() {
+    const offsetY = window.pageYOffset;
+
+    console.log(offsetY);
+}
 
 $(window).on('load', function () {
     let b = $('body');
@@ -21,6 +26,16 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    window.addEventListener('scroll', function(e) {
+        console.log(e);
+        headerPosition();
+    });
+
+    /*$(document).on('scroll', function(e) {
+        console.log(e);
+        headerPosition();
+    });*/
+
     // Swiper slider
     if ($('.swiper-container').length) {
         let slider;

@@ -10,7 +10,7 @@ $text-color: $main-first-color;
 $input-placeholder-color: #aaa;
 
 // fonts
-$font-family-base: 'Verdana', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
@@ -23,11 +23,16 @@ $font-size-default: 16px;
 $line-height-base: 1.25;
 
 // behavior
-$transition-base: all .3s ease 0s;
+$transition-base: all .35s ease-in-out 0s;
 
 //Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
+
+$primary: $main-first-color;
+$info: $main-second-color;
+$danger: $main-third-color;
+$light: $main-light-color;
 
 $grid-breakpoints: (
         xs: 0,
