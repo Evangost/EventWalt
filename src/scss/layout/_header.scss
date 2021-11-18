@@ -8,12 +8,73 @@ header.header {
   min-width: 320px;
   width: 100%;
   z-index: 100;
+  transition: $transition-base;
 
   &.scrollable {
     position: fixed;
+    background: #fff;
+    transition: $transition-base;
+
+    .header {
+      &-content {
+        padding: 40px 0 25px;
+        color: $main-first-color;
+
+        .btn {
+          color: $main-first-color;
+        }
+      }
+
+      &__menu {
+        li {
+          &> a {
+            color: $main-first-color;
+
+            svg {
+              fill: $main-first-color;
+            }
+          }
+        }
+      }
+
+      &__languages {
+        &-current {
+          color: $main-first-color;
+        }
+
+        &::after {
+          border-color: $main-first-color;
+        }
+      }
+
+      &__login {
+        color: $main-first-color;
+      }
+    }
+
+    .logo {
+      svg {
+        fill: $main-first-color;
+      }
+    }
 
     &.hide {
+      transform: translateY(-100%);
+    }
+  }
+}
 
+.logo {
+  svg {
+    width: 180px;
+    height: 26px;
+    fill: $main-light-color;
+    transition: $transition-base;
+  }
+
+  &:hover {
+    svg {
+      fill: $main-second-color;
     }
   }
 }
@@ -26,6 +87,7 @@ header.header {
     align-content: center;
     align-items: center;
     padding-top: 30px;
+    transition: $transition-base;
 
     .btn {
       color: $main-light-color;
@@ -124,21 +186,6 @@ header.header {
     }
   }
 
-  .logo {
-    svg {
-      width: 180px;
-      height: 26px;
-      fill: $main-light-color;
-      transition: $transition-base;
-    }
-
-    &:hover {
-      svg {
-        fill: $main-second-color;
-      }
-    }
-  }
-
   &__tools {
     display: inline-flex;
     flex-flow: row nowrap;
@@ -154,6 +201,7 @@ header.header {
       content: '';
       border-right: 1px solid #fff;
       margin-left: 20px;
+      transition: $transition-base;
     }
 
     &:hover {
@@ -172,6 +220,7 @@ header.header {
       color: $main-light-color;
       cursor: pointer;
       text-transform: uppercase;
+      transition: $transition-base;
     }
 
     &-list {

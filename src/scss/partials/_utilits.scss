@@ -122,8 +122,15 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: $font-weight-normal;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .btn {

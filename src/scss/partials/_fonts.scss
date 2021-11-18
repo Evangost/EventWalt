@@ -1,6 +1,21 @@
 $fonts-path: '../fonts/';
 
 @font-face {
+  font-family:'TTTravels';
+  src: url('#{$fonts-path}TTTravels-Black.eot');
+  src: url('#{$fonts-path}TTTravels-Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}TTTravels-Black.woff2') format('woff2'),
+  url('#{$fonts-path}TTTravels-Black.woff') format('woff'),
+  url('#{$fonts-path}TTTravels-Black.ttf') format('truetype'),
+  url('#{$fonts-path}TTTravels-Black.svg#s Black') format('svg');
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-0491;
+}
+
+@font-face {
   font-family: 'TTTravels';
   src: url('#{$fonts-path}TTTravels-Bold.eot');
   src: url('#{$fonts-path}TTTravels-Bold.eot?#iefix') format('embedded-opentype'),

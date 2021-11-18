@@ -7,10 +7,27 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/swiper-bundle.min';
 
+var lastScrollPosition = 0;
+
 function headerPosition() {
     const offsetY = window.pageYOffset;
+    const header = document.querySelector('header.header');
 
-    console.log(offsetY);
+    if (offsetY > 0) {
+        header.classList.add('scrollable');
+
+        if (offsetY > lastScrollPosition) {
+            header.classList.add('hide');
+        }
+        else {
+            header.classList.remove('hide');
+        }
+
+        lastScrollPosition = offsetY;
+    }
+    else {
+        header.classList.remove('scrollable');
+    }
 }
 
 $(window).on('load', function () {
@@ -22,19 +39,13 @@ $(window).on('load', function () {
         b.addClass('web');
     }
 
+    headerPosition();
+
     b.removeClass('loaded');
 });
 
 $(function () {
-    window.addEventListener('scroll', function(e) {
-        console.log(e);
-        headerPosition();
-    });
-
-    /*$(document).on('scroll', function(e) {
-        console.log(e);
-        headerPosition();
-    });*/
+    window.addEventListener('scroll', headerPosition);
 
     // Swiper slider
     if ($('.swiper-container').length) {
