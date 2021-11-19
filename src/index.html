@@ -1049,7 +1049,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 align-self-lg-center">
                         <div class="app__downloads">
                             <a href="#">
                                 <picture>
@@ -1059,15 +1059,15 @@
 
                             <div class="d-flex flex-column">
                                 <a href="#">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/app-store.png') %>" alt="image" title="image">
-                                    </picture>
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-app-store"></use>
+                                    </svg>
                                 </a>
 
                                 <a href="#">
-                                    <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/google-play.png') %>" alt="image" title="image">
-                                    </picture>
+                                    <svg>
+                                        <use xlink:href="./img/spritemap.svg#sprite-google-play"></use>
+                                    </svg>
                                 </a>
                             </div>
                         </div>
@@ -1100,13 +1100,13 @@
                         <form action="" class="subscribe__form">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label class="d-block">
+                                    <label class="d-block form-group">
                                         <input type="text" class="form-control" placeholder="First name">
                                     </label>
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <label class="d-block">
+                                    <label class="d-block form-group">
                                         <input type="text" class="form-control" placeholder="Last name">
                                     </label>
                                 </div>
@@ -1114,29 +1114,32 @@
 
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label class="d-block">
+                                    <label class="d-block form-group">
                                         <input type="email" class="form-control" placeholder="Business email">
                                     </label>
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <label class="d-block">
+                                    <label class="d-block form-group">
                                         <input type="tel" class="form-control" placeholder="Phone number">
                                     </label>
                                 </div>
                             </div>
 
-                            <label class="d-block">
+                            <label class="d-block form-group">
                                 <textarea class="form-control w-100" placeholder="Tell us about your event"></textarea>
                             </label>
 
-                            <div>
-                                <label>
-                                    <input type="checkbox">
+                            <label class="d-block form-group mb-lg-5 mb-4">
+                                <input type="checkbox">
 
-                                    <span>I agree to EventWallet’s Terms of Service and Privacy Policy. I agree to receive product updates and marketing communications from EventsWallet</span>
-                                </label>
-                            </div>
+                                <span class="checkbox">
+                                        <span class="checkbox__style">
+                                            <svg><use xlink:href="./img/spritemap.svg#sprite-check"></use></svg>
+                                        </span>
+                                        <span class="checkbox__text">I agree to EventWallet’s Terms of Service and Privacy Policy. I agree to receive product updates and marketing communications from EventsWallet</span>
+                                    </span>
+                            </label>
 
                             <button type="button" class="btn btn-danger">Request a demo</button>
                         </form>
@@ -1260,16 +1263,8 @@
                         an effective event by keeping the audience engaged with easy-to-use event management and communication web and app tools.</p>
 
                     <div class="footer-info__downloads">
-                        <a href="#">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/app-store.svg') %>" alt="image" title="image">
-                            </picture>
-                        </a>
-                        <a href="#">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/google-play.svg') %>" alt="image" title="image">
-                            </picture>
-                        </a>
+                        <a href="#"><svg><use xlink:href="./img/spritemap.svg#sprite-app-store"></use></svg></a>
+                        <a href="#"><svg><use xlink:href="./img/spritemap.svg#sprite-google-play"></use></svg></a>
                     </div>
                 </div>
 

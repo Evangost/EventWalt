@@ -22,4 +22,14 @@
       max-width: 100%;
     }
   }
+
+  &__form {
+    .form {
+      &-group {
+        margin-bottom: 20px;
+      }
+
+      &-control {}
+    }
+  }
 }
