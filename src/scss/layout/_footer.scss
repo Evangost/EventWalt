@@ -8,6 +8,35 @@ footer.footer {
 }
 
 .footer {
+  &-top {
+    padding: 90px 0 100px;
+    background: #fcfbfa;
+  }
+
+  &-bottom {
+    padding: 30px 0;
+
+    &__nav {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 80px;
+        }
+
+        a {
+
+        }
+      }
+    }
+  }
+
   &-content {
     display: flex;
     flex-flow: row nowrap;
@@ -17,27 +46,85 @@ footer.footer {
   }
 
   &-info {
+    max-width: 400px;
 
-  }
+    .logo {
+      display: inline-block;
+      margin-bottom: 25px;
 
-  &-column {
+      svg {
+        width: 200px;
+        height: 28px;
+        fill: $main-first-color;
+      }
+    }
 
-  }
+    &__downloads {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
 
-  &__nav {
-    &-title {}
+      a {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
 
-    &-list {
-      li {
-        a {
-
+        svg {
+          width: 133px;
+          height: 40px;
+          fill: $main-first-color;
         }
       }
     }
   }
 
+  &-column {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    max-width: 190px;
+    margin: 0 0 0 100px;
+  }
+
+  &__nav {
+    &-title {
+      margin: 0 0 28px;
+      font-weight: 700;
+      line-height: 22px;
+    }
+
+    &-list {
+      padding: 0;
+      margin: 0 0 20px;
+
+      li {
+        &:not(:last-child) {
+          margin: 0 0 16px;
+        }
+
+        a {}
+      }
+    }
+  }
+
   .social-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
     li {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
       a {
         svg {
           width: 20px;
@@ -47,13 +134,39 @@ footer.footer {
     }
   }
 
-  .footer-lang {
-    li {
-      a {
+  &-lang {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
 
+    li {
+      &:not(:first-child) {
+        margin-left: 20px;
+
+        &::before {
+          content: '';
+          margin-right: 20px;
+          border-right: 1px solid $main-first-color;
+        }
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+
+        &.footer-lang__current {
+          font-weight: 700;
+        }
       }
     }
   }
 }
 
-.copyright {}
+.copyright {
+  margin: 0;
+}
