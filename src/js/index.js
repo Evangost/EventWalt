@@ -59,7 +59,7 @@ $(function () {
                 loop: true,
                 autoplay: true,
                 spaceBetween: 25,
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
@@ -74,6 +74,29 @@ $(function () {
                 dynamicBullets: true,
             });
         }
+
+        let sliderPartners;
+        let slidePartners = document.querySelectorAll('.partners-slider .swiper-slide').length;
+        sliderPartners = new Swiper('.partners-slider', {
+            observer: true,
+            observeParents: true,
+            loop: true,
+            autoplay: true,
+            spaceBetween: 25,
+            slidesPerView: 7,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            /*scrollbar: {
+                el: '.swiper-scrollbar',
+            },*/
+            dynamicBullets: true,
+        });
     }
 
     // Lazy load observer

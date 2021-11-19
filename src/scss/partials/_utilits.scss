@@ -131,6 +131,7 @@
 .subtitle {
   font-size: 20px;
   line-height: 32px;
+  text-align: center;
 }
 
 .btn {
@@ -193,7 +194,7 @@
   display: block;
   width: 80px;
   height: 10px;
-  margin: 50px auto;
+  margin: 0 auto 28px;
 
   /*&:hover {
     &::before, &::after {

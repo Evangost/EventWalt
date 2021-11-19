@@ -1,0 +1,39 @@
+.section-secure-info {
+  padding: 100px 0;
+  background: #fcfbfa;
+
+  .title {
+    margin: 0 0 60px;
+  }
+}
+
+.secure-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  &__box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    max-width: 500px;
+    margin: 0 0 40px;
+
+    svg {
+      flex: 0 1 auto;
+      width: 27px;
+      height: 10px;
+      fill: $main-first-color;
+      margin: 5px 12px 0 0;
+    }
+
+    &-text {
+      margin: 0;
+      line-height: 26px;
+    }
+  }
+}
