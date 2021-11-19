@@ -46,9 +46,9 @@ $(function () {
     // Swiper slider
     if ($('.swiper-container').length) {
         /* default slider */
-        let slider;
+        /*let slider;
         let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
-        /*if (slide > 1) {
+        if (slide > 1) {
             slider = new Swiper('.swiper-container', {
                 observer: true,
                 observeParents: true,
@@ -64,9 +64,9 @@ $(function () {
                     el: '.swiper-pagination',
                     clickable: true
                 },
-                /!*scrollbar: {
+                scrollbar: {
                     el: '.swiper-scrollbar',
-                },*!/
+                },
                 dynamicBullets: true,
             });
         }*/
@@ -119,6 +119,30 @@ $(function () {
                 /*scrollbar: {
                     el: '.swiper-scrollbar',
                 },*/
+                dynamicBullets: true,
+            });
+        }
+
+        /* reviews slider */
+        let sliderReview;
+        let slideReview = document.querySelectorAll('.reviews-slider .swiper-slide').length;
+        if (slideReview > 1) {
+            slideReview = new Swiper('.reviews-slider', {
+                observer: true,
+                observeParents: true,
+                loop: true,
+                autoplay: true,
+                spaceBetween: 25,
+                slidesPerView: 1,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
                 dynamicBullets: true,
             });
         }

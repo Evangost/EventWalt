@@ -1,4 +1,93 @@
 .section-reviews {
   padding: 100px 0;
   background: #fcfbfa;
+
+  .title {
+    margin: 0 0 60px;
+  }
+}
+
+.reviews {
+  &-slider {
+    .swiper {
+      &-pagination {
+        position: static;
+        margin-top: 35px;
+
+        &-bullet {
+          margin: 0 5px;
+          border-radius: 0;
+          transition: $transition-base;
+
+          &-active {
+            background: $main-third-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+
+    &-rating {
+      margin: 0 0 12px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $main-first-color;
+      }
+    }
+
+    &-message {
+      margin: 0;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+
+      svg {
+        width: 19px;
+        height: 16px;
+        margin-right: 12px;
+        fill: $main-third-color;
+        transform: translateY(-7px);
+      }
+    }
+  }
+
+  &__author {
+    margin: 0 0 40px;
+    text-align: center;
+
+    &-pic {
+      display: block;
+      margin: 0 0 16px;
+
+      img {
+        width: 100%;
+        max-width: 102px;
+        height: 120px;
+      }
+    }
+
+    &-name {
+      margin: 0 0 8px;
+      font-weight: 700;
+      line-height: 22px;
+    }
+
+    &-position {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+    }
+  }
 }

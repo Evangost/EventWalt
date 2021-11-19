@@ -269,5 +269,9 @@ header.header {
 
   &__login {
     color: $main-light-color;
+
+    &:hover {
+      color: $main-second-color;
+    }
   }
 }

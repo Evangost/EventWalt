@@ -74,6 +74,7 @@
             font-size: 20px;
             line-height: 28px;
             text-transform: capitalize;
+            will-change: padding;
           }
         }
       }
@@ -154,6 +155,7 @@
       bottom: 100px;
       max-width: 396px;
       padding: 20px 24px 28px;
+      margin: 0;
       background: #222349;
       box-shadow: 0 0 27px rgba(0, 0, 0, .3);
       border-radius: 10px;

@@ -7,4 +7,53 @@ footer.footer {
   position: relative;
 }
 
+.footer {
+  &-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+  }
+
+  &-info {
+
+  }
+
+  &-column {
+
+  }
+
+  &__nav {
+    &-title {}
+
+    &-list {
+      li {
+        a {
+
+        }
+      }
+    }
+  }
+
+  .social-list {
+    li {
+      a {
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .footer-lang {
+    li {
+      a {
+
+      }
+    }
+  }
+}
+
 .copyright {}
