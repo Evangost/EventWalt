@@ -7,6 +7,8 @@
 }
 
 .events {
+  margin-bottom: 60px;
+
   &> div {
     margin: 0 0 20px;
   }
@@ -32,6 +34,7 @@
       align-items: center;
       width: 88px;
       height: 88px;
+      margin: 0 0 8px;
       border-radius: 10px;
       background: #fff;
 
@@ -50,6 +53,7 @@
     }
 
     &-type {
+      margin: 0;
       color: #fff;
       font-size: 14px;
       font-weight: bold;

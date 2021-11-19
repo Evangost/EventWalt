@@ -8,21 +8,18 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/swiper-bundle.min';
 
+const header = document.querySelector('header.header');
 var lastScrollPosition = 0;
-
 function headerPosition() {
     const offsetY = window.pageYOffset;
-    const header = document.querySelector('header.header');
 
     if (offsetY > 0) {
         header.classList.add('scrollable');
-
         if (offsetY > lastScrollPosition) {
             header.classList.add('hide');
         } else {
             header.classList.remove('hide');
         }
-
         lastScrollPosition = offsetY;
     } else {
         header.classList.remove('scrollable');
@@ -38,9 +35,9 @@ $(window).on('load', function () {
         b.addClass('web');
     }
 
-    headerPosition();
-
     b.removeClass('loaded');
+
+    headerPosition();
 });
 
 $(function () {
@@ -128,11 +125,11 @@ $(function () {
     }
 
     // Platform tabs
-    if ($('.platform-tabs')) {
-        $(".platform-tabs").tabs({
-            event: "mouseover",
-        }).addClass("ui-tabs-vertical ui-helper-clearfix");
-        $(".platform-tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+    if ($('.platform-tabs').length) {
+        $('.platform-tabs').tabs({
+            event: 'mouseover',
+        }).addClass('ui-tabs-vertical ui-helper-clearfix');
+        $('.platform-tabs li').removeClass('ui-corner-top').addClass('ui-corner-left');
     }
 
     // Lazy load observer
