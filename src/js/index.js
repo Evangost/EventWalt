@@ -1,8 +1,9 @@
 import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
-import 'jquery-ui'
-import 'jquery-ui/ui/effect'
+import 'jquery-ui';
+import 'jquery-ui/ui/effect';
+import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/swiper-bundle.min';
@@ -18,14 +19,12 @@ function headerPosition() {
 
         if (offsetY > lastScrollPosition) {
             header.classList.add('hide');
-        }
-        else {
+        } else {
             header.classList.remove('hide');
         }
 
         lastScrollPosition = offsetY;
-    }
-    else {
+    } else {
         header.classList.remove('scrollable');
     }
 }
@@ -49,10 +48,10 @@ $(function () {
 
     // Swiper slider
     if ($('.swiper-container').length) {
+        /* default slider */
         let slider;
         let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
-
-        if (slide > 1) {
+        /*if (slide > 1) {
             slider = new Swiper('.swiper-container', {
                 observer: true,
                 observeParents: true,
@@ -68,6 +67,32 @@ $(function () {
                     el: '.swiper-pagination',
                     clickable: true
                 },
+                /!*scrollbar: {
+                    el: '.swiper-scrollbar',
+                },*!/
+                dynamicBullets: true,
+            });
+        }*/
+
+        /* partners slider */
+        let sliderPartners;
+        let slidePartners = document.querySelectorAll('.partners-slider .swiper-slide').length;
+        if (slidePartners > 7) {
+            sliderPartners = new Swiper('.partners-slider', {
+                observer: true,
+                observeParents: true,
+                loop: true,
+                autoplay: true,
+                spaceBetween: 25,
+                slidesPerView: 7,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
                 /*scrollbar: {
                     el: '.swiper-scrollbar',
                 },*/
@@ -75,28 +100,39 @@ $(function () {
             });
         }
 
-        let sliderPartners;
-        let slidePartners = document.querySelectorAll('.partners-slider .swiper-slide').length;
-        sliderPartners = new Swiper('.partners-slider', {
-            observer: true,
-            observeParents: true,
-            loop: true,
-            autoplay: true,
-            spaceBetween: 25,
-            slidesPerView: 7,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-            /*scrollbar: {
-                el: '.swiper-scrollbar',
-            },*/
-            dynamicBullets: true,
-        });
+        /* platform slider */
+        let sliderPlatform;
+        let slidePlatform = document.querySelectorAll('.partners-slider .swiper-slide').length;
+        if (slidePlatform > 3) {
+            sliderPartners = new Swiper('.platform-slider', {
+                observer: true,
+                observeParents: true,
+                loop: true,
+                autoplay: false,
+                spaceBetween: 20,
+                slidesPerView: 3,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                /*scrollbar: {
+                    el: '.swiper-scrollbar',
+                },*/
+                dynamicBullets: true,
+            });
+        }
+    }
+
+    // Platform tabs
+    if ($('.platform-tabs')) {
+        $(".platform-tabs").tabs({
+            event: "mouseover",
+        }).addClass("ui-tabs-vertical ui-helper-clearfix");
+        $(".platform-tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
     }
 
     // Lazy load observer
