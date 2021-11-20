@@ -1,6 +1,5 @@
 .section-main-home {
-  padding: 170px 0 440px;
-  margin-bottom: 215px;
+  padding: 140px 0 100px;
 }
 
 .main-home {
@@ -14,9 +13,9 @@
     margin: 0 0 40px;
     color: $main-light-color;
     font-family: $font-family-custom;
-    font-size: 84px;
+    font-size: 12vw;
     font-weight: 900;
-    line-height: 88px;
+    line-height: 1;
     text-align: center;
 
     span {
@@ -34,129 +33,207 @@
 
   &__buttons {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
 
     .btn {
-      margin: 0 8px;
+      margin: 0 8px 10px;
     }
   }
 
   &__team {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    max-width: 1020px;
-    width: 100%;
-    padding: 40px 20px 0;
-    background: rgba(255, 255, 255, 0.75);
-    border-radius: 14px;
-    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.25);
-    transform: translateX(-50%);
+    display: none;
+  }
+}
 
-    &-wrapper {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-content: flex-start;
-      align-items: flex-start;
-      width: 100%;
-      max-width: 980px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 10px;
+@include media-breakpoint-up(sm) {
+
+  .main-home {
+    &__title {
+      font-size: 68px;
     }
 
-    &-column {}
+    &__buttons {
+      flex-direction: row;
 
-    &-box {
-      position: relative;
+      .btn {
+        margin: 0 8px;
+      }
+    }
+
+    &__team {
+      display: flex;
+      max-width: 1020px;
       width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      transform-style: preserve-3d;
-      transition: $transition-base;
+      padding: 20px 10px 0;
+      margin-top: 60px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 14px;
+      box-shadow: 0 5px 32px rgba(0, 0, 0, 0.25);
 
-      &.bg-primary {
-        color: #fff;
+      &-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 980px;
+        padding: 40px 10px 0;
+        background: #ffffff;
+        border-radius: 10px;
       }
 
-      &-wrap {
-        width: 300px;
-        height: 200px;
+      &-column {}
 
-        &:not(:last-child) {
+      &-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        transition: $transition-base;
+
+        &.bg-primary {
+          color: #fff;
+        }
+
+        &-wrap {
+          width: 225px;
+          height: 200px;
           margin: 0 0 44px;
-        }
 
-        &.lg {
-          height: 444px;
-        }
+          &.lg {
+            height: 444px;
+          }
 
-        &:hover {
-          .main-home {
-            &__team {
-              &-box {
-                transform: rotateY(180deg);
+          &:hover {
+            .main-home {
+              &__team {
+                &-box {
+                  transform: rotateY(180deg);
 
-                &-front {
-                  opacity: 0;
-                  visibility: hidden;
+                  &-front {
+                    opacity: 0;
+                    visibility: hidden;
+                  }
+                  &-back {}
                 }
-                &-back {}
               }
             }
           }
         }
-      }
 
-      &-front, &-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        backface-visibility: hidden;
-        transition: all .3s ease 0s;
-      }
-
-      &-front {
-        img {
+        &-front, &-back {
           position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+          transition: all .3s ease 0s;
         }
-      }
 
-      &-back {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-content: stretch;
-        align-items: stretch;
-        padding: 0 20px;
-        text-align: center;
-        transform: rotateY(180deg);
-
-        .btn {
-          width: auto;
-          text-transform: capitalize;
+        &-front {
+          img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 110%;
+            transform: translateX(-50%);
+          }
         }
-      }
 
-      &-title {
-        margin: 0 0 10px;
-        font-size: 24px;
-        font-weight: 600;
-      }
+        &-back {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-content: stretch;
+          align-items: stretch;
+          padding: 0 20px;
+          text-align: center;
+          transform: rotateY(180deg);
 
-      &-text {
-        margin: 0 0 10px;
-        font-size: 14px;
+          .btn {
+            width: auto;
+            text-transform: capitalize;
+          }
+        }
+
+        &-title {
+          margin: 0 0 10px;
+          font-size: 24px;
+          font-weight: 600;
+        }
+
+        &-text {
+          margin: 0 0 10px;
+          font-size: 14px;
+        }
       }
     }
   }
 }
+@include media-breakpoint-up(md) {
+  .section-main-home {
+    padding-top: 170px;
+  }
+
+  .main-home {
+    &__title {
+      font-size: 84px;
+      line-height: 88px;
+    }
+
+    &__team {
+      &-box {
+        &-wrap {
+          width: 300px;
+        }
+
+        &-front {
+          img {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-main-home {
+    padding: 170px 0 440px;
+    margin-bottom: 215px;
+  }
+
+  .main-home {
+    &__team {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      padding: 40px 20px 0;
+      margin: 0;
+      transform: translateX(-50%);
+
+      &-wrapper {
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      &-column {}
+
+      &-box {
+        &-wrap {
+          margin: 0;
+
+          &:not(:last-child) {
+            margin: 0 0 44px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}

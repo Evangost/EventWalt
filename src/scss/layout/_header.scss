@@ -16,16 +16,21 @@ header.header {
     transition: $transition-base;
 
     .header {
-      &-content {
-        padding: 40px 0 25px;
+      .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
         color: $main-first-color;
-
-        .btn {
-          color: $main-first-color;
-        }
       }
 
       &__menu {
+        &-toggle {
+          border-color: $main-first-color;
+
+          &::before, &::after, span {
+            background: $main-first-color;
+          }
+        }
+
         li {
           &> a {
             color: $main-first-color;
@@ -37,17 +42,29 @@ header.header {
         }
       }
 
+      &__tools {
+        &-btn {
+          &_top {
+            display: none;
+          }
+          &_scrollable {
+            display: flex;
+          }
+        }
+
+        .btn-link {
+          color: $main-first-color;
+        }
+      }
+
       &__languages {
         &-current {
           color: $main-first-color;
         }
-
-        &::after {
-          border-color: $main-first-color;
-        }
       }
 
       &__login {
+        border-color: $main-first-color;
         color: $main-first-color;
       }
     }
@@ -62,50 +79,117 @@ header.header {
       transform: translateY(-100%);
     }
   }
-}
 
-.logo {
-  svg {
-    width: 180px;
-    height: 26px;
-    fill: $main-light-color;
-    transition: $transition-base;
-  }
-
-  &:hover {
+  .logo {
+    order: 0;
     svg {
-      fill: $main-second-color;
+      width: 180px;
+      height: 26px;
+      fill: $main-light-color;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      svg {
+        fill: $main-second-color;
+      }
     }
   }
 }
 
 .header {
-  &-content {
+  .container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     transition: $transition-base;
-
-    .btn {
-      color: $main-light-color;
-    }
   }
 
   &__menu {
+    position: fixed;
+    top: 15%;
+    left: -100%;
     display: inline-flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    padding: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 50px 0;
     margin: 0;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-base;
+
+    &.opened {
+      left: 0%;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-wrap {
+      order: 1;
+    }
+
+    &-toggle {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      background: none;
+      border: 1px solid $main-light-color;
+      border-radius: 100%;
+
+      &::before, &::after, span {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 18px;
+        height: 1px;
+        background: $main-light-color;
+        transform: translate(-50%, -50%);
+        transition: $transition-base;
+        pointer-events: none;
+      }
+
+      &::before {
+        top: 34%;
+      }
+
+      &::after {
+        top: 65%;
+      }
+
+      &.opened {
+        &::before, &::after {
+          top: 50%;
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate3d(0, 0, 1, 135deg);
+        }
+        &::after {
+          transform: translate(-50%, -50%) rotate3d(0, 0, 1, -135deg);
+        }
+
+        span {
+          filter: blur(10px);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
 
     li {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin: 0 0 30px;
       }
 
       &:hover {
@@ -127,14 +211,19 @@ header.header {
       }
 
       &> a {
-        color: $main-light-color;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        color: $main-first-color;
         font-weight: 600;
         text-decoration: none;
 
         svg {
           width: 13px;
           height: 13px;
-          fill: $main-light-color;
+          margin-left: 10px;
           transition: $transition-base;
         }
 
@@ -187,22 +276,33 @@ header.header {
   }
 
   &__tools {
+    order: 3;
     display: inline-flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-content: center;
     align-items: center;
+    width: 100%;
+    margin-top: 10px;
+
+    &-btn {
+      transition: $transition-base;
+
+      &_top {
+        display: flex;
+      }
+      &_scrollable {
+        display: none;
+      }
+    }
+
+    .btn-link {
+      color: $main-light-color;
+    }
   }
 
   &__languages {
-    margin-right: 20px;
-
-    &::after {
-      content: '';
-      border-right: 1px solid #fff;
-      margin-left: 20px;
-      transition: $transition-base;
-    }
+    margin-right: 10px;
 
     &:hover {
       .header__languages-list {
@@ -268,6 +368,9 @@ header.header {
   }
 
   &__login {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid $main-light-color;
     color: $main-light-color;
 
     &:hover {
@@ -275,3 +378,67 @@ header.header {
     }
   }
 }
+
+@include media-breakpoint-up(sm) {
+  .header {
+    &__menu {
+      top: 9.5%;
+      width: 50%;
+
+      &-wrap {
+        order: 0;
+      }
+    }
+
+    &__tools {
+      order: 0;
+      justify-content: flex-start;
+      width: auto;
+      margin: 0;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .header {
+    &__languages {
+      margin-right: 20px;
+    }
+
+    &__login {
+      padding-left: 20px;
+      margin-left: 20px;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .header {
+    &__menu {
+      position: static;
+      flex-direction: row;
+      width: auto;
+      padding: 0;
+      background: none;
+      opacity: 1;
+      visibility: visible;
+
+      &-toggle {
+        display: none;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin: 0 30px 0 0;
+        }
+
+        &> a {
+          color: $main-light-color;
+
+          svg {
+            fill: $main-light-color;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {}

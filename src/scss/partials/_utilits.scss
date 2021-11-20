@@ -122,20 +122,20 @@
 }
 
 .title {
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 46px;
+  line-height: 1.5;
   text-align: center;
 }
 
 .subtitle {
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 1.5;
   text-align: center;
 }
 
 .btn {
-  padding: 13px 28px;
+  padding: 13px 12px;
   border-radius: 333px;
   box-shadow: none !important;
   font-size: 1em;
@@ -150,7 +150,7 @@
     padding: 10px 28px;
     background: $primary;
     background-clip: padding-box;
-    border: 4px solid transparent;
+    border: 2px solid transparent;
     color: $light;
     overflow: visible;
 
@@ -162,7 +162,7 @@
       bottom: 0;
       left: 0;
       z-index: -1;
-      margin: -4px;
+      margin: -2px;
       border-radius: inherit;
       transition: $transition-base;
     }

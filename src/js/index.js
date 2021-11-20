@@ -10,6 +10,7 @@ import Swiper from 'swiper/swiper-bundle.min';
 
 const header = document.querySelector('header.header');
 var lastScrollPosition = 0;
+
 function headerPosition() {
     const offsetY = window.pageYOffset;
 
@@ -42,6 +43,27 @@ $(window).on('load', function () {
 
 $(function () {
     window.addEventListener('scroll', headerPosition);
+
+    (function () {
+        const headerMenu = $('.header__menu');
+
+        $('.header__menu-toggle').on('click', function (e) {
+            $('body').toggleClass('modal-open');
+            $(this).toggleClass('opened');
+            headerMenu.toggleClass('opened');
+            e.stopPropagation();
+        });
+
+        headerMenu.on('click', function (e) {
+            e.stopPropagation();
+        });
+
+        $(document).on('click', function () {
+            $('body').removeClass('modal-open');
+            headerMenu.removeClass('opened');
+            $('.header__menu-toggle').removeClass('opened');
+        });
+    })();
 
     // Swiper slider
     if ($('.swiper-container').length) {
@@ -81,19 +103,15 @@ $(function () {
                 loop: true,
                 autoplay: true,
                 spaceBetween: 25,
-                slidesPerView: 7,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                /*scrollbar: {
-                    el: '.swiper-scrollbar',
-                },*/
-                dynamicBullets: true,
+                slidesPerView: 3,
+                breakpoints: {
+                    576: {
+                        slidesPerView: 5,
+                    },
+                    992: {
+                        slidesPerView: 7,
+                    }
+                }
             });
         }
 
@@ -107,19 +125,15 @@ $(function () {
                 loop: true,
                 autoplay: false,
                 spaceBetween: 20,
-                slidesPerView: 3,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                /*scrollbar: {
-                    el: '.swiper-scrollbar',
-                },*/
-                dynamicBullets: true,
+                slidesPerView: 1,
+                breakpoints: {
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    }
+                }
             });
         }
 

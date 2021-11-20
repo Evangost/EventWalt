@@ -175,14 +175,13 @@
 
     &__card {
       position: relative;
-      padding: 20px;
+      padding: 20px 10px;
       background: #ffffff;
       border-radius: 10px;
 
       &-wrap {
         width: 100%;
-        max-width: 380px;
-        padding: 12px;
+        padding: 6px;
         background: rgba(255, 255, 255, 0.75);
         border: 1px solid #fff;
         border-radius: 13px;
@@ -200,7 +199,7 @@
 
       &-company {
         position: absolute;
-        top: 15px;
+        top: 0;
         right: 20px;
 
         img {
@@ -216,7 +215,7 @@
       }
 
       &-info {
-        flex: 1 0 auto;
+        flex: 1 1 auto;
       }
 
       &-author {
@@ -245,6 +244,31 @@
           fill: $main-third-color;
           transform: translateY(-7px);
         }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .platform-slider {
+    &__card {
+      max-width: 380px;
+    }
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {
+  .platform-slider {
+    &__card {
+      padding: 20px;
+
+      &-wrap {
+        padding: 12px;
+      }
+
+      &-company {
+        top: 10px;
       }
     }
   }

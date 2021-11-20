@@ -5,15 +5,17 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.464667fba4386aa39068.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.77b548815f6972ae123e.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <button type="button" class="header-content__toggle" hidden></button>
-            <div class="header-content">
+            <div class="header__menu-wrap">
+                <button type="button" class="header__menu-toggle">
+                    <span></span>
+                </button>
                 <ul class="header__menu">
                     <li>
                         <a href="#">Platform
@@ -41,28 +43,28 @@
                         <a href="#">Contact Us</a>
                     </li>
                 </ul>
+            </div>
 
-                <a href="index.html" class="logo">
-                    <svg>
-                        <use xlink:href="./img/spritemap.svg#sprite-logo"></use>
-                    </svg>
-                </a>
+            <a href="index.html" class="logo">
+                <svg>
+                    <use xlink:href="./img/spritemap.svg#sprite-logo"></use>
+                </svg>
+            </a>
 
-                <div class="header__tools">
-                    <div class="header__languages">
-                        <span class="header__languages-current">Eng</span>
+            <div class="header__tools">
+                <div class="header__languages">
+                    <span class="header__languages-current">Eng</span>
 
-                        <ul class="header__languages-list">
-                            <li><a href="#">Ru</a></li>
-                            <li><a href="#">Ua</a></li>
-                        </ul>
-                    </div>
+                    <ul class="header__languages-list">
+                        <li><a href="#">Ru</a></li>
+                        <li><a href="#">Ua</a></li>
+                    </ul>
 
                     <a href="#" class="header__login">Log in</a>
-
-                    <a href="#" class="btn btn-link">Explore Events</a>
-                    <a href="#" class="btn btn-link" hidden>Request a Demo</a>
                 </div>
+
+                <a href="#" class="btn btn-link header__tools-btn header__tools-btn_top">Explore Events</a>
+                <a href="#" class="btn btn-primary header__tools-btn header__tools-btn_scrollable">Request a Demo</a>
             </div>
         </div>
     </header>
@@ -84,7 +86,7 @@
 
                 <div class="main-home__team">
                     <div class="main-home__team-wrapper">
-                        <div class="main-home__team-column">
+                        <div class="main-home__team-column mr-sm-3 mr-lg-0">
                             <div class="main-home__team-box-wrap">
                                 <div class="main-home__team-box bg-primary">
                                     <div class="main-home__team-box-front">
@@ -133,8 +135,8 @@
                             </div>
                         </div>
 
-                        <div class="main-home__team-column">
-                            <div class="main-home__team-box-wrap">
+                        <div class="main-home__team-column d-sm-inline-flex flex-lg-column">
+                            <div class="main-home__team-box-wrap mr-sm-3 mr-lg-0">
                                 <div class="main-home__team-box bg-info">
                                     <div class="main-home__team-box-front">
                                         <picture>
@@ -666,7 +668,7 @@
                 <p class="title">Safe, reliable and secure</p>
 
                 <div class="row secure-info">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6">
                         <div class="secure-info__box">
                             <svg>
                                 <use xlink:href="./img/spritemap.svg#sprite-check"></use>
@@ -675,7 +677,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6">
                         <div class="secure-info__box">
                             <svg>
                                 <use xlink:href="./img/spritemap.svg#sprite-check"></use>
@@ -684,7 +686,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6">
                         <div class="secure-info__box">
                             <svg>
                                 <use xlink:href="./img/spritemap.svg#sprite-check"></use>
@@ -694,7 +696,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-6">
                         <div class="secure-info__box">
                             <svg>
                                 <use xlink:href="./img/spritemap.svg#sprite-check"></use>
@@ -713,7 +715,7 @@
                 <p class="title">Explore customer's events</p>
 
                 <div class="row events">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="events__card">
                             <div class="events__card-info">
                                 <p class="events__card-date">
@@ -735,7 +737,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="events__card">
                             <div class="events__card-info">
                                 <p class="events__card-date">
@@ -757,7 +759,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="events__card">
                             <div class="events__card-info">
                                 <p class="events__card-date">
@@ -779,7 +781,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="events__card">
                             <div class="events__card-info">
                                 <p class="events__card-date">
@@ -801,7 +803,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="events__card">
                             <div class="events__card-info">
                                 <p class="events__card-date">
@@ -823,7 +825,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="events__card">
                             <div class="events__card-info">
                                 <p class="events__card-date">
@@ -1090,7 +1092,7 @@
                 <p class="subtitle">Experience a live demo, get answers to your specific questions, and find out why EventsWallet is the right choice for your event</p>
 
                 <div class="row subscribe">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 d-none d-lg-block">
                         <picture class="subscribe__pic">
                             <img src="img/default.svg" data-src="img/team06.png" alt="image" title="image">
                         </picture>
@@ -1099,13 +1101,13 @@
                     <div class="col-lg-7 offset-lg-1">
                         <form action="" class="subscribe__form">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-sm-6">
                                     <label class="d-block form-group">
                                         <input type="text" class="form-control" placeholder="First name">
                                     </label>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-sm-6">
                                     <label class="d-block form-group">
                                         <input type="text" class="form-control" placeholder="Last name">
                                     </label>
@@ -1113,13 +1115,13 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-sm-6">
                                     <label class="d-block form-group">
                                         <input type="email" class="form-control" placeholder="Business email">
                                     </label>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-sm-6">
                                     <label class="d-block form-group">
                                         <input type="tel" class="form-control" placeholder="Phone number">
                                     </label>
@@ -1378,5 +1380,5 @@
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.464667fba4386aa39068.min.js"></script></body>
+<script type="text/javascript" src="bundle.77b548815f6972ae123e.min.js"></script></body>
 </html>

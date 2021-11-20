@@ -178,6 +178,8 @@ input {
 }
 
 button {
+  box-shadow: none !important;
+  outline: none !important;
   transition: $transition-base;
 }
 
