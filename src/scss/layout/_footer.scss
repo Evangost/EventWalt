@@ -246,14 +246,6 @@ footer.footer {
         }
       }
     }
-
-    &-column {
-      align-content: flex-start;
-      align-items: flex-start;
-      max-width: 190px;
-      margin: 0 0 0 100px;
-      text-align: left;
-    }
   }
 
   .copyright {
@@ -262,6 +254,12 @@ footer.footer {
 }
 @include media-breakpoint-up(xl) {
   .footer {
+    &-top {
+      .container {
+        justify-content: space-between;
+      }
+    }
+
     &-bottom {
       &__nav {
         li {
@@ -273,8 +271,16 @@ footer.footer {
       }
     }
 
-    &__info {
-      max-width: 400px;
+    &-column {
+      align-content: flex-start;
+      align-items: flex-start;
+      max-width: 190px;
+      margin: 0 0 0 100px;
+      text-align: left;
+    }
+
+    &-info {
+      flex: 0 0 25%;
     }
   }
 }
