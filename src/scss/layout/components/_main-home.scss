@@ -120,11 +120,13 @@
                   animation: flip .35s ease-in-out 1 alternate;
 
                   &-front {
-                    img {
-                      opacity: 0;
-                    }
+                    opacity: 0;
+                    visibility: hidden;
                   }
-                  &-back {}
+                  &-back {
+                    opacity: 1;
+                    visibility: visible;
+                  }
                 }
               }
             }
@@ -159,6 +161,8 @@
           align-content: stretch;
           align-items: stretch;
           padding: 0 20px;
+          opacity: 0;
+          visibility: hidden;
           text-align: center;
           transform: rotateY(180deg);
 
