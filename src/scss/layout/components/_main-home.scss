@@ -10,7 +10,7 @@
   align-items: stretch;
 
   &__title {
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     color: $main-light-color;
     font-family: $font-family-custom;
     font-size: 12vw;
@@ -49,6 +49,9 @@
 }
 
 @include media-breakpoint-up(sm) {
+  .section-main-home {
+    padding: 140px 0 100px;
+  }
 
   .main-home {
     &__title {
@@ -115,10 +118,10 @@
                 &-box {
                   transform: rotateY(180deg);
 
-                  &-front {
+                  /*&-front {
                     opacity: 0;
                     visibility: hidden;
-                  }
+                  }*/
                   &-back {}
                 }
               }
@@ -177,10 +180,6 @@
   }
 }
 @include media-breakpoint-up(md) {
-  .section-main-home {
-    padding-top: 170px;
-  }
-
   .main-home {
     &__title {
       font-size: 84px;
@@ -204,14 +203,14 @@
 }
 @include media-breakpoint-up(lg) {
   .section-main-home {
-    padding: 170px 0 440px;
+    padding: 160px 0 400px;
     margin-bottom: 215px;
   }
 
   .main-home {
     &__team {
       position: absolute;
-      top: 70%;
+      top: 65%;
       left: 50%;
       padding: 40px 20px 0;
       margin: 0;

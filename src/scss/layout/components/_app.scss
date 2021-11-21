@@ -18,6 +18,11 @@
     margin: 0;
 
     li {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
       color: #fff;
       line-height: 1;
 
