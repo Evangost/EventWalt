@@ -118,10 +118,9 @@
                 &-box {
                   transform: rotateY(180deg);
 
-                  /*&-front {
+                  &-front {
                     opacity: 0;
-                    visibility: hidden;
-                  }*/
+                  }
                   &-back {}
                 }
               }
@@ -203,8 +202,8 @@
 }
 @include media-breakpoint-up(lg) {
   .section-main-home {
-    padding: 160px 0 400px;
-    margin-bottom: 215px;
+    padding: 160px 0 340px;
+    margin-bottom: 245px;
   }
 
   .main-home {
