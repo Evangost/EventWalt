@@ -1,5 +1,4 @@
 .section-platform {
-  height: 1090px;
   padding: 100px 0;
   background: #222349;
   z-index: 2;
@@ -13,10 +12,10 @@
 .platform {
   &-tabs {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
+    align-content: stretch;
+    align-items: stretch;
     width: 100%;
     max-width: 1130px;
     padding: 0;
@@ -29,25 +28,28 @@
     .ui-tabs {
       &-nav {
         display: inline-flex;
-        flex-flow: column wrap;
+        flex-flow: row nowrap;
         justify-content: flex-start;
-        align-content: stretch;
-        align-items: stretch;
-        margin-right: 70px;
+        align-content: center;
+        align-items: center;
+        height: 60px;
+        margin: 0 0 60px;
+        overflow: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
 
         &::before, &::after {
           display: none;
         }
 
         li {
-          width: 225px;
+          display: inline-flex;
+          min-height: min-content;
           padding: 0;
-          margin: 0 0 22px;
           border-radius: 10px;
           transition: $transition-base;
 
           &.ui-tabs-active {
-            margin: 0 0 16px;
             background: #fff;
 
             .ui-tabs-anchor {
@@ -109,6 +111,8 @@
           img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            object-position: top left;
           }
         }
       }
@@ -257,18 +261,53 @@
   }
 }
 @include media-breakpoint-up(md) {}
-@include media-breakpoint-up(lg) {}
-@include media-breakpoint-up(xl) {
-  .platform-slider {
-    &__card {
-      padding: 20px;
+@include media-breakpoint-up(lg) {
+  .section-platform {
+    height: 1090px;
+  }
 
-      &-wrap {
-        padding: 12px;
+  .platform-tabs {
+    flex-direction: row;
+    .ui-tabs-nav {
+      flex-direction: column;
+      align-content: flex-start;
+      align-items: flex-start;
+      height: auto;
+      margin-right: 70px;
+      overflow: inherit;
+
+      li {
+        width: 225px;
+        margin: 0 0 22px;
+
+        &.ui-tabs-active {
+          margin: 0 0 16px;
+        }
       }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .platform {
+    &-tabs {
+      flex-direction: row;
 
-      &-company {
-        top: 10px;
+      .ui-tabs {
+
+      }
+    }
+
+    &-slider {
+      &__card {
+        padding: 20px;
+
+        &-wrap {
+          padding: 12px;
+        }
+
+        &-company {
+          top: 10px;
+        }
       }
     }
   }

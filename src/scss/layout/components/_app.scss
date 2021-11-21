@@ -9,6 +9,11 @@
 
 .app {
   &__list {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
     padding: 0;
     margin: 0;
 
@@ -31,13 +36,13 @@
 
   &__downloads {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
+    align-content: center;
+    align-items: center;
 
     &> a {
-      margin-right: 12px;
+      margin: 0 12px 12px 0;
     }
 
     a {
@@ -55,7 +60,49 @@
 
   &__pic {
     position: absolute;
-    top: -110px;
-    left: 90px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .app {
+    &__downloads {
+      flex-direction: row;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .app {
+    align-content: center;
+    align-items: center;
+
+    &__downloads {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .app {
+    &__downloads {
+      flex-direction: row;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__pic {
+      top: -240px;
+      left: 100px;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .app {
+    &__pic {
+      top: -200px;
+      left: 90px;
+    }
   }
 }
