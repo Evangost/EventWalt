@@ -11,22 +11,6 @@ import Swiper from 'swiper/swiper-bundle.min';
 const header = document.querySelector('header.header');
 var lastScrollPosition = 0;
 
-function headerPosition() {
-    const offsetY = window.pageYOffset;
-
-    if (offsetY > 0) {
-        header.classList.add('scrollable');
-        if (offsetY > lastScrollPosition) {
-            header.classList.add('hide');
-        } else {
-            header.classList.remove('hide');
-        }
-        lastScrollPosition = offsetY;
-    } else {
-        header.classList.remove('scrollable');
-    }
-}
-
 $(window).on('load', function () {
     let b = $('body');
 
@@ -189,3 +173,19 @@ $(function () {
         });
     }
 });
+
+function headerPosition() {
+    const offsetY = window.pageYOffset;
+
+    if (offsetY > 0) {
+        header.classList.add('scrollable');
+        if (offsetY > lastScrollPosition) {
+            header.classList.add('hide');
+        } else {
+            header.classList.remove('hide');
+        }
+        lastScrollPosition = offsetY;
+    } else {
+        header.classList.remove('scrollable');
+    }
+}
