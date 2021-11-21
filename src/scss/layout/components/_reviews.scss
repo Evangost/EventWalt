@@ -24,6 +24,26 @@
           }
         }
       }
+
+      &-button {
+        &-prev, &-next {
+          &::after {
+            display: none;
+          }
+
+          svg {
+            fill: #DAD8D8;
+          }
+        }
+
+        &-prev {
+          transform: translate(0, -50%) rotate(90deg);
+        }
+
+        &-next {
+          transform: translate(0, -50%) rotate(-90deg);
+        }
+      }
     }
   }
 
@@ -43,6 +63,7 @@
         width: 20px;
         height: 20px;
         fill: $main-first-color;
+        transition: $transition-base;
       }
     }
 
@@ -58,6 +79,12 @@
         margin-right: 12px;
         fill: $main-third-color;
         transform: translateY(-7px);
+      }
+    }
+
+    &:hover {
+      .reviews__box-rating svg {
+        fill: #ffc107;
       }
     }
   }
@@ -91,3 +118,8 @@
     }
   }
 }
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
