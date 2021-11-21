@@ -117,9 +117,12 @@
               &__team {
                 &-box {
                   transform: rotateY(180deg);
+                  animation: flip .35s ease-in-out 1 alternate;
 
                   &-front {
-                    //opacity: 0;
+                    img {
+                      opacity: 0;
+                    }
                   }
                   &-back {}
                 }
