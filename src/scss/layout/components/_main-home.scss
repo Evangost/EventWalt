@@ -13,7 +13,7 @@
     margin: 0 0 20px;
     color: $main-light-color;
     font-family: $font-family-custom;
-    font-size: 12vw;
+    font-size: 10vw;
     font-weight: 900;
     line-height: 1;
     text-align: center;
@@ -57,17 +57,7 @@
 
   .main-home {
     &__title {
-      font-size: 68px;
-    }
-
-    &__buttons {
-      flex-direction: row;
-
-      .btn {
-        width: auto;
-        max-width: none;
-        margin: 0 8px;
-      }
+      font-size: 58px;
     }
 
     &__team {
@@ -196,9 +186,14 @@
 }
 @include media-breakpoint-up(md) {
   .main-home {
-    &__title {
-      font-size: 84px;
-      line-height: 88px;
+    &__buttons {
+      flex-direction: row;
+
+      .btn {
+        width: auto;
+        max-width: none;
+        margin: 0 8px;
+      }
     }
 
     &__team {
@@ -223,9 +218,14 @@
   }
 
   .main-home {
+    &__title {
+      font-size: 84px;
+      line-height: 88px;
+    }
+
     &__team {
       position: absolute;
-      top: 65%;
+      top: 68%;
       left: 50%;
       padding: 40px 20px 0;
       margin: 0;

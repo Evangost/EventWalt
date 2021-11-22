@@ -46,7 +46,7 @@
     align-content: center;
     align-items: center;
 
-    &> a {
+    &> span {
       margin: 0 12px 12px 0;
     }
 
@@ -72,6 +72,7 @@
   .app {
     &__downloads {
       flex-direction: row;
+      justify-content: center;
       align-content: flex-start;
       align-items: flex-start;
     }
@@ -84,6 +85,7 @@
 
     &__downloads {
       flex-direction: column;
+      justify-content: flex-start;
       align-content: center;
       align-items: center;
     }
