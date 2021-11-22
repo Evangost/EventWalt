@@ -298,6 +298,8 @@ header.header {
 
       &_top {
         display: flex;
+        align-content: center;
+        align-items: center;
       }
       &_scrollable {
         display: none;
@@ -306,6 +308,13 @@ header.header {
 
     .btn-link {
       color: $main-light-color;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 10px;
+        fill: $main-light-color;
+      }
     }
   }
 
