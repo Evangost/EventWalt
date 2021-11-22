@@ -104,6 +104,10 @@
 
           &.lg {
             height: 444px;
+
+            img {
+
+            }
           }
 
           &:hover {
@@ -146,7 +150,8 @@
             position: absolute;
             bottom: 0;
             left: 50%;
-            width: 110%;
+            //width: 110%;
+            width: 130%;
             transform: translateX(-50%);
             pointer-events: none;
           }
@@ -200,11 +205,17 @@
       &-box {
         &-wrap {
           width: 300px;
+
+          &.lg {
+            img {
+              width: 115%;
+            }
+          }
         }
 
         &-front {
           img {
-            width: auto;
+            width: 100%;
           }
         }
       }
