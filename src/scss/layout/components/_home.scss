@@ -4,11 +4,25 @@
 
 .home {
   &__title {
-    span {}
+    margin: 0 0 30px;
+    color: $main-light-color;
+    font-family: $font-family-custom;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.25;
+    text-transform: uppercase;
+
+    span {
+      color: transparent;
+      -webkit-text-stroke: 1px $main-light-color;
+    }
   }
 
   &__text {
-
+    margin: 0 0 36px;
+    color: $main-light-color;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   &__buttons {

@@ -1,0 +1,18 @@
+.section-action {
+  padding: 80px 0;
+  background: $main-first-color;
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    &-link {
+      color: $main-light-color;
+
+      svg {
+        fill: $main-light-color;
+      }
+    }
+  }
+}
