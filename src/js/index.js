@@ -177,7 +177,30 @@ $(function () {
 function headerPosition() {
     const offsetY = window.pageYOffset;
 
-    if (offsetY > 0) {
+    if (offsetY >= 1 && offsetY < 300) {
+        header.classList.remove('scrollable');
+        if (offsetY > lastScrollPosition) {
+            header.classList.add('hide');
+        } else {
+            header.classList.remove('hide');
+        }
+        lastScrollPosition = offsetY;
+    }
+    else if (offsetY > 300) {
+        header.classList.add('scrollable');
+        if (offsetY > lastScrollPosition) {
+            header.classList.add('hide');
+        } else {
+            header.classList.remove('hide');
+        }
+        lastScrollPosition = offsetY;
+    }
+    else {
+        header.classList.remove('hide');
+        header.classList.remove('scrollable');
+    }
+
+    /*if (offsetY > 300) {
         header.classList.add('scrollable');
         if (offsetY > lastScrollPosition) {
             header.classList.add('hide');
@@ -187,5 +210,5 @@ function headerPosition() {
         lastScrollPosition = offsetY;
     } else {
         header.classList.remove('scrollable');
-    }
+    }*/
 }

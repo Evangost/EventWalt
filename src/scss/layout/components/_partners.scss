@@ -12,10 +12,6 @@
         object-position: center;
         filter: grayscale(1);
         transition: $transition-base;
-
-        &:hover {
-          filter: grayscale(0);
-        }
       }
     }
   }

@@ -5,9 +5,11 @@ header.header {
   order: 1;
   -webkit-order: 1;
   position: absolute;
+  top: 0;
   min-width: 320px;
   width: 100%;
   z-index: 100;
+  transform: translateY(0%);
   transition: $transition-base;
 
   &.scrollable {
@@ -74,10 +76,10 @@ header.header {
         fill: $main-first-color;
       }
     }
+  }
 
-    &.hide {
-      transform: translateY(-100%);
-    }
+  &.hide {
+    transform: translateY(-100%);
   }
 
   .logo {
