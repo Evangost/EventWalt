@@ -94,6 +94,7 @@
 
     &__desktop {
       display: none;
+      @extend %glass;
     }
 
     &__mobile {
@@ -162,12 +163,11 @@
       border-radius: 10px;
 
       &-wrap {
+        @extend %glass;
         width: 100%;
         padding: 6px;
-        background: rgba(255, 255, 255, 0.75);
         border: 1px solid #fff;
         border-radius: 13px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
       }
 
       &-head {
@@ -245,7 +245,6 @@
       width: 100%;
       max-width: 750px;
       padding: 40px 20px 20px;
-      background: rgba(255, 255, 255, 0.7);
       border: 1px solid #fff;
       border-radius: 13px;
 
