@@ -67,11 +67,8 @@
     }
 
     &.reverse {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-
       &> span {
-        margin: 0 0 12px 12px;
+        margin: 0 12px 12px;
       }
 
       img {
@@ -79,10 +76,8 @@
         border-radius: 10px;
       }
 
-      a {
-        svg {
-          fill: $main-first-color;
-        }
+      svg {
+        fill: $main-first-color;
       }
     }
   }
@@ -103,6 +98,10 @@
       justify-content: center;
       align-content: flex-start;
       align-items: flex-start;
+
+      &.reverse {
+        justify-content: flex-start;
+      }
     }
   }
 }
@@ -116,6 +115,12 @@
       justify-content: flex-start;
       align-content: center;
       align-items: center;
+
+      &.reverse {
+        flex-direction: row;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
     }
   }
 }
@@ -125,6 +130,11 @@
       flex-direction: row;
       align-content: flex-start;
       align-items: flex-start;
+
+      &.reverse {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
     }
 
     &__pic {

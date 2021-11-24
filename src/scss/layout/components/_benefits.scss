@@ -1,5 +1,4 @@
 .section-benefits {
-  max-height: 530px;
   padding: 100px 0;
   background: $main-first-color;
   z-index: 2;
@@ -15,14 +14,14 @@
   justify-content: space-between;
   align-content: stretch;
   align-items: stretch;
-  padding: 40px;
+  padding: 15px;
   background: #fff;
   border-radius: 10px;
   text-align: left;
 
   &-wrap {
     @extend %glass;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
   }
 
@@ -33,7 +32,11 @@
     align-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+
+    &:not(:last-child) {
+      margin: 0 0 40px;
+    }
   }
 
   &__ico {
@@ -66,5 +69,37 @@
     margin: 0;
     color: #4d4f6a;
     line-height: 26px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .benefits-inner {
+    padding: 40px;
+
+    &-wrap {
+      padding: 20px;
+    }
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .benefits-inner {
+    &__box {
+      max-width: 30%;
+      margin: 0 !important;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section-benefits {
+    max-height: 530px;
+  }
+
+  .benefits-inner {
+    padding: 60px;
+
+    &__box {
+      max-width: 300px;
+    }
   }
 }

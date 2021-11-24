@@ -20,9 +20,16 @@
 
   &__content {
     max-width: 510px;
+    margin: 0 auto;
 
     .style-list {
       margin-bottom: 40px;
+    }
+  }
+
+  &__pic {
+    img {
+      width: 100%;
     }
   }
 
@@ -60,6 +67,19 @@
         height: 14px;
         margin-right: 10px;
         fill: $main-third-color;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {
+  .events-info {
+    &__pic {
+      img {
+        width: auto;
       }
     }
   }
