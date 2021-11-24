@@ -19,7 +19,7 @@
     width: 100%;
     max-width: 1130px;
     padding: 0;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
 
     &::before, &::after {
       display: none;
@@ -150,7 +150,7 @@
   }
 
   &-partners {
-    transform: translate(0, -15%);
+    //transform: translate(0, -15%);
   }
 
   &-slider {

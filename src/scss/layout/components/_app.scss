@@ -8,6 +8,10 @@
 }
 
 .app {
+  .title {
+    margin: 0 0 8px;
+  }
+
   &__list {
     display: flex;
     flex-flow: column wrap;
@@ -61,10 +65,34 @@
         fill: #fff;
       }
     }
+
+    &.reverse {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      &> span {
+        margin: 0 0 12px 12px;
+      }
+
+      img {
+        border: 1px solid $main-first-color;
+        border-radius: 10px;
+      }
+
+      a {
+        svg {
+          fill: $main-first-color;
+        }
+      }
+    }
   }
 
   &__pic {
     position: absolute;
+  }
+
+  &__text {
+    margin: 0 0 40px;
   }
 }
 

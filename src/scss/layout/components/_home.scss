@@ -36,4 +36,56 @@
       }
     }
   }
+
+
+  &-trade {
+    &__qr {
+      @extend %glass;
+      position: absolute;
+      left: 90px;
+      bottom: 50px;
+      padding: 8px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+    &__pic {
+      position: relative;
+      display: block;
+      width: 260px;
+      height: 320px;
+      margin: 0 auto;
+      background: $main-third-color;
+      border-radius: 10px;
+
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__cloud {
+      position: absolute;
+      display: block;
+      padding: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      @extend %glass;
+
+      img {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      &_first {
+        top: -40px;
+        right: 20px;
+      }
+      &_second {
+        top: 50px;
+        right: -10px;
+      }
+    }
+  }
 }

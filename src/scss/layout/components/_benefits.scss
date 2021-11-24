@@ -2,8 +2,69 @@
   max-height: 530px;
   padding: 100px 0;
   background: $main-first-color;
+  z-index: 2;
 
   .title {
     margin-bottom: 40px;
+  }
+}
+
+.benefits-inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: left;
+
+  &-wrap {
+    @extend %glass;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__box {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__ico {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 40px;
+    background: #eef6fd;
+    border-radius: 10px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    color: $main-first-color;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  &__text {
+    margin: 0;
+    color: #4d4f6a;
+    line-height: 26px;
   }
 }
