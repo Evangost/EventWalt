@@ -38,6 +38,7 @@
   }
 
 
+
   &-trade {
     &__qr {
       @extend %glass;
@@ -86,6 +87,92 @@
         top: 50px;
         right: -20px;
       }
+    }
+  }
+
+  &-conferences {
+    position: relative;
+    width: 385px;
+    height: 335px;
+    margin: 0 auto;
+
+    &__menu {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+    }
+
+    &__cloud {
+      @extend %glass;
+      position: absolute;
+      padding: 6px;
+      border-radius: 10px;
+
+      img {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      &_first {
+        bottom: 46px;
+        right: -86px;
+      }
+      &_second {
+        bottom: -27px;
+        right: -62px;
+      }
+    }
+  }
+
+  &-corporations {
+    position: relative;
+    width: 408px;
+    height: 306px;
+    margin: 0 auto;
+
+    &__pic {
+
+    }
+
+    &__cloud {
+      @extend %glass;
+      position: absolute;
+      padding: 6px;
+      border-radius: 10px;
+
+      &_first {
+        top: 87px;
+        left: -46px;
+      }
+
+      &_second {
+        top: 154px;
+        left: -75px;
+      }
+
+      &_third {
+        right: -27px;
+        bottom: 33px;
+      }
+    }
+  }
+
+  &-chambers {
+    width: 485px;
+    height: 293px;
+    margin: 0 auto;
+
+    &__pic {}
+
+    &__cloud {
+      @extend %glass;
+      position: absolute;
+      bottom: -55px;
+      left: 50%;
+      padding: 6px;
+      border-radius: 10px;
+      transform: translateX(-50%);
     }
   }
 }
