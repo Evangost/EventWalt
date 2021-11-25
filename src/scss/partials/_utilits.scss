@@ -31,6 +31,18 @@
   }
 }
 
+@keyframes bounce {
+  from {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @supports (backdrop-filter: blur()) {
   %glass {
     background: linear-gradient(138deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 100%);
@@ -235,7 +247,7 @@
       color: $light;
 
       &::before {
-        transform: matrix3d(1, 0, 0.5, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        animation: bounce .5s ease-in-out 1 alternate;
       }
     }
   }
