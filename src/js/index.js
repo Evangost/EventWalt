@@ -212,3 +212,5 @@ function headerPosition() {
         header.classList.remove('scrollable');
     }*/
 }
+
+alert(window.innerWidth);
