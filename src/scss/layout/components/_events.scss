@@ -97,11 +97,33 @@
     }
 
     &-text {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
       margin: 0;
       font-size: 14px;
       font-weight: 500;
 
-      span {}
+      span {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+
+        &:not(:last-child) {
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            margin: 0 8px;
+            background: $main-first-color;
+          }
+        }
+      }
     }
   }
 }

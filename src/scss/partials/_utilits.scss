@@ -193,11 +193,13 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  padding: 12px 12px;
+  max-height: 48px;
+  padding: 14px 12px;
   border-radius: 333px;
   box-shadow: none !important;
   font-size: 1em;
   font-weight: 600;
+  line-height: 1;
 
   svg {
     width: 12px;
@@ -211,7 +213,8 @@
 
   &-gradient {
     position: relative;
-    padding: 10px 28px;
+    padding-right: 28px;
+    padding-left: 28px;
     background: $primary;
     background-clip: padding-box;
     border: 2px solid transparent;
