@@ -115,6 +115,12 @@
   }
 }
 
+body {
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
 .main-wrapper {
   display: flex;
   flex-flow: column wrap;
@@ -303,6 +309,15 @@
   }
 }
 
+.field-label {
+  display: inline-flex;
+  margin: 0 0 16px;
+  color: $main-first-color;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
 input {
   &[type="checkbox"] {
     display: none !important;
@@ -472,42 +487,83 @@ textarea {
   }
 }
 
-/*
-.ui-tabs-vertical {
-  width: 100%;
+.modal {
+  &-lg {
+    max-width: 820px;
+  }
 
-  .ui-tabs {
-    &-nav {
-      padding: .2em .1em .2em .2em;
-      float: left;
-      width: 12em;
+  &-content {
+    @extend %glass;
+    padding: 10px;
+    border-radius: 10px;
 
-      li {
-        clear: left;
-        width: 100%;
-        border-bottom-width: 1px !important;
-        border-right-width: 0 !important;
-        margin: 0 -1px .2em 0;
+    &-inner {
+      position: relative;
+      padding: 45px 20px 20px;
+      background: white;
+      border-radius: 10px;
 
-        &.ui-tabs-active {
-          padding-bottom: 0;
-          padding-right: .1em;
-          border-right-width: 1px;
-        }
+      .title {
+        margin: 0 0 6px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+      }
 
-        a {
-          display: block;
-          color: #fff;
-          font-size: 20px;
-          line-height: 28px;
-        }
+      .subtitle {
+        margin: 0;
+        font-weight: 300;
+        font-size: 16px;
       }
     }
+  }
 
-    &-panel {
-      padding: 1em;
-      float: right;
-      width: 40em;
+  &-header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 35px;
+    border: none;
+  }
+
+  &-body {
+    padding: 0;
+  }
+
+  .close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    opacity: 1;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 22px;
+      height: 2px;
+      background: $main-first-color;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
     }
   }
-}*/
+
+  .form-group {
+    margin-bottom: 26px;
+  }
+
+  .submit {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}

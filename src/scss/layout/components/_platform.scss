@@ -102,10 +102,7 @@
       width: 100%;
       max-width: 220px;
       height: 432px;
-      padding: 0 2px;
       margin: 0 auto;
-      border-radius: 35px;
-      overflow: hidden;
       z-index: 3;
 
       svg {
@@ -121,11 +118,7 @@
           top: 0;
           left: 50%;
           width: 100%;
-          max-width: 205px;
           height: 100%;
-          border-radius: 35px;
-          object-fit: cover;
-          object-position: top;
           transform: translateX(-50%);
           z-index: -1;
         }

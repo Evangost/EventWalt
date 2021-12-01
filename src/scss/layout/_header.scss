@@ -130,6 +130,7 @@ header.header {
     transition: $transition-base;
 
     &.opened {
+      top: 100%;
       left: 0%;
       opacity: 1;
       visibility: visible;

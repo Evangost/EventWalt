@@ -32,7 +32,7 @@ $(function () {
         const headerMenu = $('.header__menu');
 
         $('.header__menu-toggle').on('click', function (e) {
-            $('body').toggleClass('modal-open');
+            $('body').toggleClass('no-scroll');
             $(this).toggleClass('opened');
             headerMenu.toggleClass('opened');
             e.stopPropagation();
@@ -43,7 +43,7 @@ $(function () {
         });
 
         $(document).on('click', function () {
-            $('body').removeClass('modal-open');
+            $('body').removeClass('no-scroll');
             headerMenu.removeClass('opened');
             $('.header__menu-toggle').removeClass('opened');
         });
