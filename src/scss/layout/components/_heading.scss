@@ -1,0 +1,25 @@
+.section-heading {
+  padding: 200px 0;
+}
+
+.heading {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+  &__title {
+    margin: 0 0 4px;
+    color: white;
+    font-family: $font-family-custom;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+
+  }
+}
