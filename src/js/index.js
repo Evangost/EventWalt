@@ -6,6 +6,7 @@ import 'jquery-ui/ui/effect';
 import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
+import 'select2';
 import Swiper from 'swiper/swiper-bundle.min';
 
 const header = document.querySelector('header.header');
@@ -163,6 +164,21 @@ $(function () {
             });
         }
     })();
+
+    // Select2
+    /*(function() {
+        const select = $('.select-js');
+
+        if (select) {
+            select.each(function(e, n) {
+                e.select2({
+                    minimumResultsForSearch: -1,
+                    dropdownParent: $(this).nextAll('.select-js-dropdown'),
+                    width: '100%',
+                });
+            })
+        }
+    })();*/
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
