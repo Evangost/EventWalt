@@ -166,19 +166,20 @@ $(function () {
     })();
 
     // Select2
-    /*(function() {
-        const select = $('.select-js');
+    (function() {
+        let select = $('.select-js');
 
         if (select) {
-            select.each(function(e, n) {
-                e.select2({
+            select.each(function(n, e) {
+                console.log(n, e);
+                $(e).select2({
                     minimumResultsForSearch: -1,
                     dropdownParent: $(this).nextAll('.select-js-dropdown'),
                     width: '100%',
                 });
             })
         }
-    })();*/
+    })();
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
