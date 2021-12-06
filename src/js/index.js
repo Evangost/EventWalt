@@ -166,7 +166,7 @@ $(function () {
     })();
 
     // Select2
-    (function() {
+    /*(function() {
         let select = $('.select-js');
 
         if (select) {
@@ -178,7 +178,7 @@ $(function () {
                 });
             })
         }
-    })();
+    })();*/
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
