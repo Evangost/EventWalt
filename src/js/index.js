@@ -171,7 +171,6 @@ $(function () {
 
         if (select) {
             select.each(function(n, e) {
-                console.log(n, e);
                 $(e).select2({
                     minimumResultsForSearch: -1,
                     dropdownParent: $(this).nextAll('.select-js-dropdown'),
