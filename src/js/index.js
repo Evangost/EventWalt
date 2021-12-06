@@ -166,19 +166,19 @@ $(function () {
     })();
 
     // Select2
-    /*(function() {
+    (function() {
         let select = $('.select-js');
 
         if (select) {
             select.each(function(n, e) {
                 $(e).select2({
                     minimumResultsForSearch: -1,
-                    dropdownParent: $(this).nextAll('.select-js-dropdown'),
+                    dropdownParent:  $(this).parents('.form-group').find('.select-js-dropdown'),
                     width: '100%',
                 });
             })
         }
-    })();*/
+    })();
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
