@@ -292,6 +292,32 @@ body {
   }
 }
 
+.social-list {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    a {
+      display: block;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $main-first-color;
+      }
+    }
+  }
+}
+
 .color-separator {
   position: relative;
   display: block;
