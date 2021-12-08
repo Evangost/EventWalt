@@ -280,6 +280,16 @@ body {
       }
     }
   }
+
+  &-tag {
+    padding: 5px 10px !important;
+    background: #FFFFFF;
+    border-radius: 35px;
+    color: $main-second-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+  }
 }
 
 .color-separator {
