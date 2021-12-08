@@ -71,6 +71,7 @@
 .demo-form {
   max-width: 540px;
   padding: 44px;
+  margin: 0 auto;
   background: white;
   border-radius: 10px;
 
@@ -78,6 +79,14 @@
     @extend %glass;
     padding: 20px;
     border-radius: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 28px;
+  }
+
+  &__submit {
+    width: 200px;
   }
 }
 
