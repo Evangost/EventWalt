@@ -6,7 +6,7 @@ import 'jquery-ui/ui/effect';
 import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
-import 'select2';
+// import 'select2';
 import Swiper from 'swiper/swiper-bundle.min';
 
 const header = document.querySelector('header.header');
@@ -166,7 +166,7 @@ $(function () {
     })();
 
     // Select2
-    (function() {
+    /*(function() {
         let select = $('.select-js');
 
         if (select) {
@@ -176,9 +176,9 @@ $(function () {
                     dropdownParent:  $(this).parents('.form-group').find('.select-js-dropdown'),
                     width: '100%',
                 });
-            })
+            });
         }
-    })();
+    })();*/
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');

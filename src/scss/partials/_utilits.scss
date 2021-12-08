@@ -193,6 +193,26 @@ body {
   text-align: center;
 }
 
+.quote {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 24px;
+
+  svg {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    fill: $main-third-color;
+  }
+}
+
 .btn {
   display: inline-flex;
   flex-flow: row nowrap;
@@ -603,7 +623,6 @@ textarea {
     overflow: hidden;
   }
 }
-
 
 .style-list {
   padding: 0;

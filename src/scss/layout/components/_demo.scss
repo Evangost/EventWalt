@@ -69,7 +69,16 @@
 }
 
 .demo-form {
+  max-width: 540px;
+  padding: 44px;
+  background: white;
+  border-radius: 10px;
 
+  &-wrap {
+    @extend %glass;
+    padding: 20px;
+    border-radius: 10px;
+  }
 }
 
 .demo-info {
