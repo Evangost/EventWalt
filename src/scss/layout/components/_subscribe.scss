@@ -9,23 +9,42 @@
 .subscribe {
   justify-content: center;
 
+  &-wrap {
+    @extend %glass;
+    border-radius: 10px;
+    box-shadow: 0 0 82px rgba(0, 0, 0, 0.2);
+
+    .subscribe {
+      justify-content: space-between;
+      padding: 60px;
+      background: white;
+      border-radius: 10px;
+    }
+  }
+
   &__pic {
     position: relative;
     display: block;
     width: 100%;
     max-width: 380px;
+    min-height: 343px;
     height: 466px;
     background: $main-third-color;
     border-radius: 10px;
 
     img {
       position: absolute;
+      left: 50%;
       bottom: 0;
       max-width: 100%;
+      transform: translateX(-50%);
     }
   }
 
   &__form {
+    max-width: 620px;
+    margin-left: auto;
+
     .form {
       &-group {
         margin-bottom: 20px;

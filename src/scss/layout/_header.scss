@@ -82,6 +82,63 @@ header.header {
     transform: translateY(-100%);
   }
 
+  &.text-primary {
+    .header {
+      .container {
+        color: $main-first-color;
+      }
+
+      &__menu {
+        &-toggle {
+          border-color: $main-first-color;
+
+          &::before, &::after, span {
+            background: $main-first-color;
+          }
+        }
+
+        li {
+          &> a {
+            color: $main-first-color;
+
+            svg {
+              fill: $main-first-color;
+            }
+          }
+        }
+      }
+
+      &__tools {
+        .btn {
+          svg {
+            fill: $main-first-color;
+          }
+        }
+
+        .btn-link {
+          color: $main-first-color;
+        }
+      }
+
+      &__languages {
+        &-current {
+          color: $main-first-color;
+        }
+      }
+
+      &__login {
+        border-color: $main-first-color;
+        color: $main-first-color;
+      }
+    }
+
+    .logo {
+      svg {
+        fill: $main-first-color;
+      }
+    }
+  }
+
   .logo {
     order: 0;
     svg {

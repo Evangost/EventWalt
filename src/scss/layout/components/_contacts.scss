@@ -1,0 +1,41 @@
+.section-home-contacts {
+  padding: 200px 0 412px;
+  background: #FCFBFA;
+}
+
+.section-contacts {
+  padding: 120px 0;
+}
+
+.contacts-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  &__text {
+    margin: 0;
+    color: white;
+  }
+}
+
+#map {
+  iframe {
+    border-radius: 10px;
+  }
+}
