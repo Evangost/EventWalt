@@ -5,6 +5,11 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
   max-width: 100%;
 }
 
