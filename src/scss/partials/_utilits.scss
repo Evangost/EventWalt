@@ -89,6 +89,16 @@
           #59AAE8 96.4%);
 }
 
+.font-weight {
+  &-medium {
+    font-weight: $font-weight-medium;
+  }
+
+  &-sbold {
+    font-weight: $font-weight-sbold;
+  }
+}
+
 .loaded {
   .main-wrapper {
     display: none;

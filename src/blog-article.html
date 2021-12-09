@@ -136,18 +136,18 @@
                                         <ul class="blog-article__list">
                                             <li>
                                                 <svg><use xlink:href="./img/spritemap.svg#sprite-check"></use></svg>
-                                                <p class="blog-article__list-text"><span class="start-text">Decreased staff turnover:</span> Low levels of retention come at a huge cost – replacing an employee carries a price tag that’s at least 2X higher than their annual salary. But, there’s also some <span class="accent-text">good news</span>: By participating in internal events – which foster a true sense of belonging and community</p>
+                                                <p class="blog-article__list-text"><span class="text-primary font-weight-sbold">Decreased staff turnover:</span> Low levels of retention come at a huge cost – replacing an employee carries a price tag that’s at least 2X higher than their annual salary. But, there’s also some <span class="text-primary font-weight-medium">good news</span>: By participating in internal events – which foster a true sense of belonging and community</p>
                                             </li>
 
                                             <li>
                                                 <svg><use xlink:href="./img/spritemap.svg#sprite-check"></use></svg>
-                                                <p class="blog-article__list-text"><span class="start-text">Increased employee engagement:</span> 85% of today’s workforce is disengaged, which costs a whopping
-                                                    <br>$7 trillion dollars in lost productivity, according to <span class="accent-text">Gallup.Meanwhile</span>, organizations with high levels of employee engagement are more profitable,</p>
+                                                <p class="blog-article__list-text"><span class="text-primary font-weight-sbold">Increased employee engagement:</span> 85% of today’s workforce is disengaged, which costs a whopping
+                                                    <br>$7 trillion dollars in lost productivity, according to <span class="text-primary font-weight-medium">Gallup.Meanwhile</span>, organizations with high levels of employee engagement are more profitable,</p>
                                             </li>
 
                                             <li>
                                                 <svg><use xlink:href="./img/spritemap.svg#sprite-check"></use></svg>
-                                                <p class="blog-article__list-text"><span class="start-text">Decreased staff turnover:</span> Low levels of retention come at a huge cost – replacing an employee carries a price tag that’s at least 2X higher than their annual salary. But, there’s also some good news: By participating in internal events – which foster a true sense of belonging and community</p>
+                                                <p class="blog-article__list-text"><span class="text-primary font-weight-sbold">Decreased staff turnover:</span> Low levels of retention come at a huge cost – replacing an employee carries a price tag that’s at least 2X higher than their annual salary. But, there’s also some good news: By participating in internal events – which foster a true sense of belonging and community</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -161,14 +161,16 @@
                                         <p class="blog-article__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
 
                                         <div class="blog-article__quote-wrap">
-                                            <p class="quote"><svg><use xlink:href="./img/spritemap.svg#sprite-quote"></use></svg>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                            <p class="quote font-weight-medium"><svg><use xlink:href="./img/spritemap.svg#sprite-quote"></use></svg>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                         </div>
 
                                         <p class="blog-article__subtitle">Payments acceptance</p>
 
-                                        <picture class="blog-article__picture">
-                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/image.jpg') %>" alt="image" title="image">
+                                        <picture class="blog-article__box-pic">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-article-02.png') %>" alt="image" title="image">
                                         </picture>
+
+                                        <p class="blog-article__note">Editor’s note: This is a guest post by Megan McKnight, Senior Technical Project Manager at <span class="text-primary font-weight-sbold">ThomasARTS.</span></p>
                                     </div>
 
                                     <div class="blog-article__box">
@@ -177,6 +179,8 @@
                                         <p class="blog-article__text">The era of remote work is here to stay – with an estimated 82% of us able to continue working from home, fully or partially. So, it shouldn’t come as a huge surprise that we are partaking in more online events and meetings than ever before. But, this statistic might surprise you… Did you know that 11 million video meetings happen everyday, and over half of them are internal?</p>
                                         <p class="blog-article__text">The era of remote work is here to stay – with an estimated 82% of us able to continue working from home, fully or partially. So, it shouldn’t come as a huge surprise that we are partaking in more online events and meetings than ever before. But, this statistic might surprise you… Did you know that 11 million video meetings happen everyday, and over half of them are internal?</p>
                                     </div>
+
+                                    <p class="blog-article__footnote"><span class="blog-article__footnote-border"></span>The era of remote work is here to stay – with an estimated 82% of us able to continue working from home, fully or partially. e.</p>
 
                                     <div class="blog-article__box">
                                         <p class="blog-article__title">Payments acceptance and optimizations</p>
@@ -189,6 +193,89 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-similar-articles">
+            <div class="container">
+                <span class="color-separator color-separator_dark"></span>
+
+                <p class="title">Related articles</p>
+
+                <div class="row blog-articles">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-articles__card">
+                            <a href="#" class="btn btn-tag">Business</a>
+
+                            <picture class="blog-articles__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/image.jpg') %>" alt="image" title="image">
+                            </picture>
+
+                            <div class="blog-articles__info">
+                                <p class="blog-articles__date">25 Oct 2021</p>
+
+                                <p class="blog-articles__title">Title of article lorem ipsum dolor sit amet</p>
+
+                                <p class="blog-articles__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque dis diam et aenean. Praesent augue scelerisque eu at sagittis, elementum orci.</p>
+
+                                <a href="#" class="btn btn-link p-0">Read more <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-articles__card">
+                            <a href="#" class="btn btn-tag">Business</a>
+
+                            <picture class="blog-articles__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/image.jpg') %>" alt="image" title="image">
+                            </picture>
+
+                            <div class="blog-articles__info">
+                                <p class="blog-articles__date">25 Oct 2021</p>
+
+                                <p class="blog-articles__title">Title of article lorem ipsum dolor sit amet</p>
+
+                                <p class="blog-articles__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque dis diam et aenean. Praesent augue scelerisque eu at sagittis, elementum orci.</p>
+
+                                <a href="#" class="btn btn-link p-0">Read more <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-articles__card">
+                            <a href="#" class="btn btn-tag">Business</a>
+
+                            <picture class="blog-articles__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/image.jpg') %>" alt="image" title="image">
+                            </picture>
+
+                            <div class="blog-articles__info">
+                                <p class="blog-articles__date">25 Oct 2021</p>
+
+                                <p class="blog-articles__title">Title of article lorem ipsum dolor sit amet</p>
+
+                                <p class="blog-articles__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque dis diam et aenean. Praesent augue scelerisque eu at sagittis, elementum orci.</p>
+
+                                <a href="#" class="btn btn-link p-0">Read more <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-connect bg-gradient">
+            <div class="container">
+                <span class="color-separator color-separator_light"></span>
+                <p class="title text-white">Stay connected</p>
+                <p class="subtitle text-white">Have any feedback or questions? We’d love to hear from you. Have any feedback or questions? <br>We’d love to hear from you.</p>
+
+                <div class="text-center">
+                    <a href="#" class="btn btn-light px-5 m-2">Sign up</a>
+                    <a href="#" class="btn btn-gradient btn-gradient_light px-5 -mx-2">Сontact us</a>
                 </div>
             </div>
         </section>

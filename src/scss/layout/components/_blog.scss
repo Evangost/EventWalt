@@ -17,6 +17,15 @@
   padding: 212px 0 100px;
 }
 
+.section-similar-articles {
+  padding: 100px 0;
+  background: rgba(250, 249, 246, 0.6);;
+
+  .title {
+    margin: 0 0 60px;
+  }
+}
+
 .blog {
   &-post {
     position: relative;
@@ -208,8 +217,8 @@
       margin-bottom: 26px;
 
       &__tag {
-        padding: 7px 22px;
-        margin-right: 20px;
+        padding: 7px 15px;
+        margin-right: 10px;
         background: #eef7fd;
         border-radius: 100px;
         color: $main-second-color;
@@ -224,6 +233,7 @@
         align-content: center;
         align-items: center;
         margin: 0;
+        font-size: 14px;
 
         &-text {
           display: inline-flex;
@@ -249,14 +259,14 @@
       }
 
       .social-list {
-        margin-left: auto;
+        margin: 15px auto 0;
       }
     }
 
     &__main-title {
       margin: 0 0 40px;
       font-family: $font-family-custom;
-      font-size: 56px;
+      font-size: 32px;
       font-weight: 900;
       line-height: 1.25;
       text-transform: uppercase;
@@ -264,6 +274,7 @@
 
     &__pic {
       display: block;
+      margin: 0 0 30px;
       border-radius: 10px;
       overflow: hidden;
 
@@ -272,11 +283,185 @@
         max-height: 455px;
       }
     }
+
+    &__box {
+      &:not(:last-child) {
+        margin: 0 0 60px;
+      }
+
+      &-pic {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__title {
+      margin: 0 0 30px;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 46px;
+    }
+
+    &__subtitle {
+      margin: 0 0 18px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+
+    &__text {
+      margin: 0 0 14px;
+      color: $input-placeholder-color;
+      line-height: 24px;
+    }
+
+    &__list {
+      padding-left: 20px;
+
+      li {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+
+        svg {
+          flex: 0 0 auto;
+          width: 22px;
+          height: 14px;
+          margin: 5px 20px 0 0;
+          fill: $main-third-color;
+        }
+      }
+
+      &-text {
+        margin: 0;
+        color: $input-placeholder-color;
+      }
+    }
+
+    &__quote-wrap {
+      padding: 15px 22px;
+      margin: 20px 0 40px;
+      background: #fcfbfa;
+
+      .quote {
+        color: $input-placeholder-color;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 26px;
+      }
+    }
+
+    &__note {
+      color: $input-placeholder-color;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 26px;
+    }
+
+    &__footnote {
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      margin: 0 0 52px;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 28px;
+      text-transform: uppercase;
+
+      &-border {
+        position: relative;
+        width: 12px;
+        margin-right: 25px;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: inline-block;
+          width: 7px;
+          height: 75px;
+          transform: translate(-50%, -50%);
+          mix-blend-mode: multiply;
+        }
+
+        &::before {
+          top: calc(50% - 3px);
+          left: calc(50% - 2px);
+          background: $main-second-color;
+        }
+
+        &::after {
+          top: calc(50% + 3px);
+          left: calc(50% + 2px);
+          background: $main-third-color;
+        }
+      }
+    }
   }
 }
 
-@include media-breakpoint-up(sm) {}
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {
+  .blog {
+    &-article {
+      &-heading {
+        &__tag {
+          padding: 7px 22px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .blog {
+    &-article {
+      &-heading {
+
+        .social-list {
+          margin: 0 0 0 auto;
+        }
+      }
+
+      &__main-title {
+        font-size: 56px;
+      }
+
+      &__pic {
+        margin: 0 0 60px;
+      }
+
+      &__list {
+        padding-left: 46px;
+      }
+
+      &__quote-wrap {
+        padding: 35px 44px;
+      }
+
+      &__footnote {
+        padding-left: 44px;
+      }
+    }
+  }
+}
 @include media-breakpoint-up(lg) {
   .blog {
     &-post {
