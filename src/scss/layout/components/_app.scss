@@ -54,6 +54,15 @@
       margin: 0 12px 12px 0;
     }
 
+    picture {
+      img {
+        width: 100%;
+        max-width: 145px;
+        height: 100%;
+        max-height: 145px;
+      }
+    }
+
     a {
       &:not(:last-of-type) {
         margin: 0 0 12px;
@@ -84,6 +93,11 @@
 
   &__pic {
     position: absolute;
+
+    img {
+      max-width: 554px;
+      max-height: 490px;
+    }
   }
 
   &__text {
