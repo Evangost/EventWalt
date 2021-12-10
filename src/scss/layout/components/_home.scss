@@ -38,7 +38,6 @@
   }
 
 
-
   &-trade {
     &__qr {
       @extend %glass;
@@ -67,6 +66,8 @@
         position: absolute;
         bottom: 0;
         left: 50%;
+        max-width: 283px;
+        max-height: 360px;
         transform: translateX(-50%);
       }
     }
