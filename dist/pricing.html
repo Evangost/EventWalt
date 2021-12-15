@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Pricing</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.0bef8b4c60c07b9ebf22.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.d432feeefa8b78b7db30.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -1236,7 +1236,7 @@
                 <p class="subtitle text-white">Have any feedback or questions? We’d love to hear from you. Have any feedback or questions? <br>We’d love to hear from you.</p>
 
                 <div class="text-center">
-                    <a href="#" class="btn btn-light px-5 m-2">Sign up</a>
+                    <a href="#" class="btn btn-light px-5 m-2" data-toggle="modal" data-target="#modal_subscribe">Sign up</a>
                     <a href="#" class="btn btn-gradient btn-gradient_light px-5 -mx-2">Сontact us</a>
                 </div>
             </div>
@@ -1434,6 +1434,48 @@
 <div class="icon-load">
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
+
+<!-- Modal Subscribe -->
+<div class="modal fade" id="modal_subscribe" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="subscribe_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-content-inner">
+                <div class="modal-header">
+                    <h5 class="modal-title title" id="subscribe_title">Subscribe to our newsletter</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="d-block form-group">
+                                    <input type="text" class="form-control" placeholder="Business email">
+                                </label>
+                            </div>
+                        </div>
+
+                        <label class="d-block form-group pb-2 mb-4">
+                            <input type="checkbox">
+
+                            <span class="checkbox">
+                            <span class="checkbox__style">
+                                <svg><use xlink:href="./img/spritemap.svg#sprite-check"></use></svg>
+                            </span>
+                            <span class="checkbox__text">I agree to EventWallet’s Terms of Service and Privacy Policy.</span>
+                        </span>
+                        </label>
+
+                        <div class="text-center">
+                            <button type="button" class="btn btn-danger submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.0bef8b4c60c07b9ebf22.min.js"></script></body>
+<script type="text/javascript" src="bundle.d432feeefa8b78b7db30.min.js"></script></body>
 </html>

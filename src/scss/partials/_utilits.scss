@@ -698,6 +698,10 @@ textarea {
 }
 
 .modal {
+  &-dialog {
+    max-width: 620px;
+  }
+
   &-lg {
     max-width: 820px;
   }
