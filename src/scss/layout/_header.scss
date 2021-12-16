@@ -141,6 +141,11 @@ header.header {
 
   .logo {
     order: 0;
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
     svg {
       width: 180px;
       height: 26px;
@@ -157,45 +162,45 @@ header.header {
 }
 
 .header {
-  .container {
+  &> .container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    min-height: 76px;
+    //padding-top: 15px;
+    //padding-bottom: 15px;
     transition: $transition-base;
   }
 
   &__menu {
     position: fixed;
-    top: 15%;
-    left: -100%;
+    top: 0;
+    left: 50%;
     display: inline-flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    align-content: center;
-    align-items: center;
-    width: 100%;
-    //height: calc(100% - 80px);
-    padding: 50px 0;
+    align-content: stretch;
+    align-items: stretch;
+    width: 92%;
+    padding: 40px 24px;
     margin: 0;
     background: white;
     border-radius: 10px;
-    //box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     opacity: 0;
     visibility: hidden;
+    transform: translateX(-50%);
     transition: $transition-base;
 
     &.opened {
-      top: 100%;
-      left: 0%;
+      top: 15px;
       opacity: 1;
       visibility: visible;
     }
 
     &-wrap {
+      align-self: center;
       order: 1;
     }
 
@@ -230,8 +235,13 @@ header.header {
       }
 
       &.opened {
+        border-color: $main-second-color;
+
+        z-index: 3;
+
         &::before, &::after {
           top: 50%;
+          background: $main-second-color;
         }
 
         &::before {
@@ -242,6 +252,7 @@ header.header {
         }
 
         span {
+          background: $main-second-color;
           filter: blur(10px);
           opacity: 0;
           visibility: hidden;
@@ -250,18 +261,24 @@ header.header {
     }
 
     &> li {
+      padding: 0 0 16px;
+      border-bottom: 1px solid #ECECEC;
+
       &:not(:last-child) {
         margin: 0 0 30px;
+        margin: 0 0 16px;
       }
 
       &:hover {
-        a {
+        &> a {
           svg {
             transform: rotate3d(1, 0, 0, 180deg);
           }
         }
 
         .header__menu-drop {
+          height: auto;
+          padding: 16px 0 0;
           transform: translate(-50%, 0) scaleY(1);
           transition-delay: 0s;
 
@@ -300,46 +317,94 @@ header.header {
     }
 
     &-drop {
-      position: fixed;
+      position: relative;
       top: 100%;
       left: 50%;
       width: 100%;
-      padding: 8px;
+      height: 0;
+      padding: 0;
       margin: 0 0 0;
       background: white;
-      border-top: 1px solid #ECECEC;
-      //box-shadow: 0 9px 20px rgba(34, 35, 73, 0.05);
-      transform: translate(-50%, 0) scaleY(0);
-      transition: $transition-base;
-      transition-duration: .15s;
-      transition-delay: .15s;
+      //border-top: 1px solid #ECECEC;
+      box-shadow: 0 9px 20px rgba(34, 35, 73, 0.05);
+      transform: translate(-50%, -50%) scaleY(0);
+
+      .container {
+        padding: 0;
+        //padding-top: 60px;
+        //padding-bottom: 60px;
+      }
 
       &-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: stretch;
         padding: 0;
         margin: 0;
       }
 
-      /*&::before {
-        content: '';
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        border-width: 0 10px 10px;
-        border-style: solid;
-        border-color: transparent transparent $main-light-color;
-        transform: translate(-50%, 100%);
-        transition: $transition-base;
-        transition-duration: .15s;
-        transition-delay: 0s;
-      }*/
-
       li {
+        flex: 0 0 50%;
+        flex: 0 0 100%;
+        max-width: 450px;
         &:not(:last-child) {
           margin: 0 0 8px;
         }
 
         a {
+          display: inline-flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          align-content: flex-start;
+          align-items: flex-start;
           color: $main-first-color;
+
+          svg {
+            flex: 0 0 auto;
+            width: 24px;
+            height: 20px;
+            transition: $transition-base;
+          }
+
+          &:hover {
+            text-decoration: none;
+
+            svg {
+              transform: translateX(-10px);
+            }
+
+            .header__menu-drop-content {
+              &-title {
+                text-decoration: none;
+              }
+
+              &-text {
+                color: #4d4f6a;
+                font-weight: 400;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      &-content {
+        padding-left: 8px;
+
+        &-title {
+          margin: 0;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 28px;
+        }
+
+        &-text {
+          margin: 0;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 17px;
         }
       }
     }
@@ -468,11 +533,7 @@ header.header {
   .header {
     &__menu {
       top: 9.5%;
-      width: 50%;
-
-      &-wrap {
-        order: 0;
-      }
+      //width: 50%;
     }
 
     &__tools {
@@ -503,6 +564,11 @@ header.header {
 }
 @include media-breakpoint-up(lg) {
   .header {
+    .container {
+      align-content: stretch;
+      align-items: stretch;
+    }
+
     &__menu {
       position: static;
       flex-direction: row;
@@ -511,12 +577,20 @@ header.header {
       background: none;
       opacity: 1;
       visibility: visible;
+      transform: none;
+
+      &-wrap {
+        order: 0;
+      }
 
       &-toggle {
         display: none;
       }
 
-      li {
+      &> li {
+        padding: 26px 0;
+        border: none;
+
         &:not(:last-child) {
           margin: 0 30px 0 0;
         }
@@ -531,9 +605,42 @@ header.header {
       }
 
       &-drop {
+        position: fixed;
+        height: auto;
+        padding: 60px 8px 30px !important;
+        transition: $transition-base;
+        transition-duration: .15s;
+        transition-delay: .15s;
+
+        .conteiner {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+
         li {
+          &:not(:last-child) {
+            margin: 0 0 30px;
+          }
+
           &> a {
             color: $main-first-color;
+          }
+        }
+
+        &-content {
+          padding-left: 12px;
+
+          &-title {
+            margin: 0 0 9px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+          }
+
+          &-text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
           }
         }
       }
