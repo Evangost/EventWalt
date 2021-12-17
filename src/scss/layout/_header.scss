@@ -168,7 +168,7 @@ header.header {
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    min-height: 76px;
+    min-height: 110px;
     //padding-top: 15px;
     //padding-bottom: 15px;
     transition: $transition-base;
@@ -325,7 +325,6 @@ header.header {
       padding: 0;
       margin: 0 0 0;
       background: white;
-      box-shadow: 0 9px 20px rgba(34, 35, 73, 0.05);
       transform: translate(-50%, -50%) scaleY(0);
 
       .container {
@@ -343,7 +342,6 @@ header.header {
       }
 
       li {
-        flex: 0 0 50%;
         flex: 0 0 100%;
         max-width: 450px;
         &:not(:last-child) {
@@ -362,6 +360,7 @@ header.header {
             flex: 0 0 auto;
             width: 24px;
             height: 20px;
+            margin-top: 3px;
             transition: $transition-base;
           }
 
@@ -528,6 +527,10 @@ header.header {
 
 @include media-breakpoint-up(sm) {
   .header {
+    &> .container {
+      min-height: 76px;
+    }
+
     &__menu {
       top: 9.5%;
       //width: 50%;
@@ -605,12 +608,13 @@ header.header {
         position: fixed;
         height: auto;
         padding: 60px 8px 30px !important;
+        box-shadow: 0 9px 20px rgba(34, 35, 73, 0.05);
         transition: $transition-base;
         transition-duration: .15s;
         transition-delay: .15s;
 
         li {
-          margin: 0 0 30px;
+          margin: 0 0 30px !important;
 
           &> a {
             color: $main-first-color;
