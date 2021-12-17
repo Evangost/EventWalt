@@ -609,11 +609,6 @@ header.header {
         transition-duration: .15s;
         transition-delay: .15s;
 
-        .container {
-          padding-top: 60px;
-          padding-bottom: 60px;
-        }
-
         li {
           &:not(:last-child) {
             margin: 0 0 30px;
