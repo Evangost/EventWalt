@@ -15,10 +15,14 @@
   }
 
   .btn {
-    padding: 14px 20px;
+    padding: 14px;
   }
 }
 @include media-breakpoint-up(md) {
+  .btn {
+    padding: 14px 20px;
+  }
+
   .modal {
     &-content {
       padding: 20px;
