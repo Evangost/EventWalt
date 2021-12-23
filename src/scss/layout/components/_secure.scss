@@ -1,5 +1,5 @@
 .section-secure-info {
-  padding: 200px 0 100px;
+  padding: 100px 0 100px;
   background: #fcfbfa;
 
   &.shows {
@@ -41,3 +41,12 @@
     }
   }
 }
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {
+  .section-secure-info {
+    padding: 200px 0 100px;
+  }
+}
+@include media-breakpoint-up(xl) {}

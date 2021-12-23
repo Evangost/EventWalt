@@ -146,17 +146,12 @@ header.header {
     justify-content: center;
     align-content: stretch;
     align-items: stretch;
+
     svg {
       width: 180px;
       height: 26px;
       fill: $main-light-color;
       transition: $transition-base;
-    }
-
-    &:hover {
-      svg {
-        fill: $main-second-color;
-      }
     }
   }
 }

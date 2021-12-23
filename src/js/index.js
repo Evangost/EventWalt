@@ -34,8 +34,6 @@ $(function () {
         const listElem = $('.header__menu > li');
 
         $(listElem).on('mouseover', function (e) {
-            console.log($(e.target).find('.header__menu-drop').length);
-
             if ($(e.target).find('.header__menu-drop').length) {
 
             }
@@ -218,7 +216,7 @@ $(function () {
 function headerPosition() {
     const offsetY = window.pageYOffset;
 
-    if (offsetY >= 1 && offsetY < 300) {
+    /*if (offsetY >= 1 && offsetY < 300) {
         header.classList.remove('scrollable');
         if (offsetY > lastScrollPosition) {
             header.classList.add('hide');
@@ -226,16 +224,16 @@ function headerPosition() {
             header.classList.remove('hide');
         }
         lastScrollPosition = offsetY;
-    } else if (offsetY > 300) {
+    } else */if (offsetY >= 1) {
         header.classList.add('scrollable');
-        if (offsetY > lastScrollPosition) {
+        /*if (offsetY > lastScrollPosition) {
             header.classList.add('hide');
         } else {
             header.classList.remove('hide');
         }
-        lastScrollPosition = offsetY;
+        lastScrollPosition = offsetY;*/
     } else {
-        header.classList.remove('hide');
+        // header.classList.remove('hide');
         header.classList.remove('scrollable');
     }
 
