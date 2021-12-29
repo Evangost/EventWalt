@@ -231,13 +231,13 @@ header.header {
       }
 
       &.opened {
-        border-color: $main-third-color;
+        border-color: $main-third-color !important;
 
         z-index: 3;
 
         &::before, &::after {
           top: 50%;
-          background: $main-third-color;
+          background: $main-third-color !important;
         }
 
         &::before {
@@ -248,7 +248,7 @@ header.header {
         }
 
         span {
-          background: $main-third-color;
+          background: $main-third-color !important;
           filter: blur(10px);
           opacity: 0;
           visibility: hidden;
