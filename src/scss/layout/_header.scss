@@ -421,6 +421,7 @@ header.header {
     }
 
     &-btn {
+      width: 190px;
       transition: $transition-base;
 
       &_top {
@@ -554,6 +555,10 @@ header.header {
       &-group {
         margin-right: 20px;
       }
+
+      &-btn {
+        width: 220px;
+      }
     }
 
     &__login {
@@ -639,10 +644,15 @@ header.header {
         }
       }
     }
+
+    &__tools {
+      &-btn {
+        width: 190px;
+      }
+    }
   }
 }
 @include media-breakpoint-up(xl) {}
-
 
 @include media-breakpoint-down(xs) {
   .header {
