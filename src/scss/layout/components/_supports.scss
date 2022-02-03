@@ -1,6 +1,6 @@
 .section-support {
   background: #222349;
-  padding-bottom: 132px;
+ /* padding-bottom: 132px;*/
 
   .subscribe-wrap {
     /*margin-top: -330px;*/
@@ -81,9 +81,15 @@
 }
 
 @include media-breakpoint-up(md) {
-
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
 }
 @include media-breakpoint-up(lg) {
+  .section-support {
+    padding: 60px;
+  }
   .support-info{
     flex-flow: row wrap;
     justify-content: space-between;
