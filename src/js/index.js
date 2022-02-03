@@ -33,16 +33,16 @@ $(function () {
         const headerMenu = $('.header__menu');
         const listElem = $('.header__menu > li');
 
-        $(listElem).on('mouseover', function (e) {
+        $(headerMenu).on('mouseover', function (e) {
             if ($(e.target).find('.header__menu-drop').length) {
 
             }
 
-            header.classList.add('scrollable');
+            // header.classList.add('light');
         });
 
-        $(listElem).on('mouseout', function (e) {
-            if (window.pageYOffset <= 0) { header.classList.remove('scrollable'); }
+        $(headerMenu).on('mouseout', function (e) {
+            if (window.pageYOffset <= 0 && !header.classList.contains('text-primary')) header.classList.remove('scrollable');
         });
 
         $('.header__menu-toggle').on('click', function (e) {
