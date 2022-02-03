@@ -13,7 +13,7 @@ const header = document.querySelector('header.header');
 var lastScrollPosition = 0;
 
 $(window).on('load', function () {
-    /*let b = $('body');
+    let b = $('body');
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         b.addClass('ios');
@@ -21,7 +21,7 @@ $(window).on('load', function () {
         b.addClass('web');
     }
 
-    b.removeClass('loaded');*/
+    b.removeClass('loaded');
 
     headerPosition();
 });

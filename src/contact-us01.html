@@ -5,14 +5,14 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Contact us</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.165dbc5c855ff5322fc3.min.css" rel="stylesheet"></head>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header text-primary">
         <div class="container">
-            <div class="header__menu-wrap" hidden>
+            <div class="header__menu-wrap">
                 <button type="button" class="header__menu-toggle">
                     <span></span>
                 </button>
@@ -75,18 +75,88 @@
     <main class="content">
         <section class="section section-home-contacts">
             <div class="container">
-                <h1 class="heading__title text-primary text-center">contact us</h1>
-                <p class="subtitle m-0">Hello, there! We'll be glad to hear from you</p>
+                <h1 class="heading__title text-primary text-center">Our offices and contacts</h1>
+            </div>
+        </section>
+
+        <section class="section section-country-card">
+            <div class="container">
+                <div class="country-card-wrapper">
+                    <div class="country-card">
+                        <p class="country-card__title">China</p>
+                        <p class="country-card__text">Room 2169, No.618 East Yan’an Road, Huangpu district, Shanghai China</p>
+                        <p class="country-card__text-bold">Phone: </p>
+                        <p class="country-card__text">+3(72)884-05-59</p>
+                    </div>
+                    <div class="country-card">
+                        <p class="country-card__title">Ukraine</p>
+                        <p class="country-card__text">st. Kazimir Malevich, 86L, 03150, Kyiv, Ukraine</p>
+                        <p class="country-card__text-bold">Phone: </p>
+                        <p class="country-card__text">+3(72)884-05-59</p>
+                    </div>
+                    <div class="country-card">
+                        <p class="country-card__title">Estonia</p>
+                        <p class="country-card__text">Harju maakond, Kesklinna linnaosa, Ahtri tn 12, 10151, Tallinn, Estonia</p>
+                        <p class="country-card__text-bold">Phone: </p>
+                        <p class="country-card__text">+3(72)884-05-59</p>
+                    </div>
+                    <div class="country-card">
+                        <p class="country-card__title">Russia</p>
+                        <p class="country-card__text">115280, г. Москва, ул. Ленинская Свобода, дом 19, эт 1, 41Х1Д , оф Б1Ш</p>
+                        <p class="country-card__text-bold">Phone: </p>
+                        <p class="country-card__text">+3(72)884-05-59</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section section-support">
             <div class="container">
+            <div class="support-info">
+                <div class="support-info__box">
+                    <div class="support-info__ico"><svg><use xlink:href="./img/spritemap.svg#sprite-ico-25"></use></svg></div>
+                    <p class="support-info__title">Support</p>
+                    <p class="support-info__text">Need help? Contact our support team</p>
+                    <a href="#" class="support-info__link">Get support <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
+                </div>
+
+                <div class="support-info__box">
+                    <div class="support-info__ico"><svg><use xlink:href="./img/spritemap.svg#sprite-ico-02"></use></svg></div>
+                    <p class="support-info__title">PR</p>
+                    <p class="support-info__text">Reach out to the EventsWallet communications team</p>
+                    <a href="#" class="support-info__link">Contact the team <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
+                </div>
+
+                <div class="support-info__box">
+                    <div class="support-info__ico"><svg><use xlink:href="./img/spritemap.svg#sprite-ico-30"></use></svg></div>
+                    <p class="support-info__title">Partnership</p>
+                    <p class="support-info__text">Contact us for partnership inquiries</p>
+                    <a href="#" class="support-info__link">Contact partner manager <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section section-subscribe">
+            <div class="container">
+                <div class="subscribe-title">
+                        <picture class="subscribe-title__logo">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/contact-us-ico.png') %>" alt="image" title="image">
+                        </picture>
+                        <p class="subscribe-title__title">
+                            Want to see EventsWallet in action?
+                        </p>
+                        <p class="subscribe-title__text">
+                            Experience a live demo, get answers to your specific questions, and find out why EventsWallet
+                            is the right choice for your event
+                        </p>
+                    </div>
+
                 <div class="subscribe-wrap">
                     <div class="row subscribe">
                         <div class="col-lg-4 d-none d-lg-block">
                             <picture class="subscribe__pic">
-                                <img src="img/default.svg" data-src="img/team08.png" alt="image" title="image">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/team08.png') %>" alt="image" title="image">
                             </picture>
                         </div>
 
@@ -140,123 +210,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="support-info">
-                    <div class="support-info__box">
-                        <div class="support-info__ico"><svg><use xlink:href="./img/spritemap.svg#sprite-ico-25"></use></svg></div>
-                        <p class="support-info__title">Support</p>
-                        <p class="support-info__text">Need help? Contact our support team</p>
-                        <a href="#" class="support-info__link">Get support <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
-                    </div>
-
-                    <div class="support-info__box">
-                        <div class="support-info__ico"><svg><use xlink:href="./img/spritemap.svg#sprite-ico-02"></use></svg></div>
-                        <p class="support-info__title">PR</p>
-                        <p class="support-info__text">Reach out to the EventsWallet communications team</p>
-                        <a href="#" class="support-info__link">Contact the team <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
-                    </div>
-
-                    <div class="support-info__box">
-                        <div class="support-info__ico"><svg><use xlink:href="./img/spritemap.svg#sprite-ico-30"></use></svg></div>
-                        <p class="support-info__title">Partnership</p>
-                        <p class="support-info__text">Contact us for partnership inquiries</p>
-                        <a href="#" class="support-info__link">Contact partner manager <svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg></a>
-                    </div>
-                </div>
             </div>
-        </section>
-
-        <section class="section section-contacts bg-gradient">
-            <div class="container text-white">
-                <div class="row justify-content-lg-between">
-                    <div class="col-lg-4">
-                        <ul class="contacts-list">
-                            <li>
-                                <p class="contacts-list__title">Address:</p>
-                                <p class="contacts-list__text">Harju maakond, Kesklinna linnaosa, Ahtri tn 12, 10151, Tallinn, Estonia EventsWallet OÜ</p>
-                            </li>
-                            <li>
-                                <p class="contacts-list__title">Phone:</p>
-                                <a href="tel:+3728840559" class="contacts-list__text">+3(72)884-05-59</a>
-                            </li>
-                            <li>
-                                <p class="contacts-list__title">Email:</p>
-                                <a href="mailto:support@eventswallet.com" class="contacts-list__text">support@eventswallet.com</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div id="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.548372878428!2d30.521181315895994!3d50.4495123953133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14c43885495abc80!2zNTDCsDI2JzU4LjIiTiAzMMKwMzEnMjQuMSJF!5e0!3m2!1sru!2sua!4v1638919459479!5m2!1sru!2sua" width="640" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-partners">
-            <div class="container">
-                <div class="partners-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner01.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner02.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner03.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner04.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner05.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner06.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner07.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner08.png" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="img/default.svg" data-src="img/partner09.png" alt="example" title="example">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
     </main>
     <!-- CONTENT END -->
 
@@ -385,7 +340,7 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 
 <!-- Modal Callback -->
@@ -454,5 +409,5 @@
     </div>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.165dbc5c855ff5322fc3.min.js"></script></body>
+</body>
 </html>

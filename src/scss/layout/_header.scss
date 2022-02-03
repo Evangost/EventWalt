@@ -14,7 +14,8 @@ header.header {
 
   &.scrollable {
     position: fixed;
-    background: #fff;
+
+   background: #fff;
     transition: $transition-base;
 
     .header {
@@ -164,8 +165,6 @@ header.header {
     align-content: center;
     align-items: center;
     min-height: 76px;
-    //padding-top: 15px;
-    //padding-bottom: 15px;
     transition: $transition-base;
   }
 
@@ -421,7 +420,7 @@ header.header {
     }
 
     &-btn {
-      width: 190px;
+      // width: 190px;
       transition: $transition-base;
 
       &_top {
@@ -647,7 +646,7 @@ header.header {
 
     &__tools {
       &-btn {
-        width: 190px;
+        width: 260px;
       }
     }
   }
