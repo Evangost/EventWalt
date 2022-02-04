@@ -1,6 +1,6 @@
 .section-support {
   background: #222349;
- /* padding-bottom: 132px;*/
+  /* padding-bottom: 132px;*/
 
   .subscribe-wrap {
     /*margin-top: -330px;*/
@@ -17,14 +17,14 @@
   align-items: center;
   /*align-content: stretch;
   align-items: stretch;*/
-  background: #222349;/*my*/
-  padding:120px 0;
+  background: #222349; /*my*/
+  padding: 60px 0;
 
 
   &__box {
     width: 100%;
     max-width: 260px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
 
   &__ico {
@@ -56,7 +56,7 @@
 
   &__text {
     /*color: #4d4f6a;*/
-    color:  #FFFFFF;
+    color: #FFFFFF;
     font-size: 1rem;
     line-height: 26px;
   }
@@ -81,23 +81,38 @@
 }
 
 @include media-breakpoint-up(md) {
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
+  .support-info {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    &__box {
+      width: 30%;
+    }
+  }
 }
+
 @include media-breakpoint-up(lg) {
   .section-support {
     padding: 60px;
   }
-  .support-info{
+  .support-info {
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
+
+    &__box {
+      width: 100%
+    }
   }
 }
 
 @include media-breakpoint-up(xl) {
-
+  .support-info {
+    &__box {
+      margin: 0;
+    }
+  }
 }
